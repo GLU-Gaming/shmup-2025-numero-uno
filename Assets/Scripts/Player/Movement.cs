@@ -37,26 +37,26 @@ public class Movement : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.Alpha6))
+        if (Input.GetKey(KeyCode.Keypad6))
         {
             {
                 rb.AddForce(new Vector2(5, 0));
             }
 
         }
-        if (Input.GetKey(KeyCode.Alpha8))
+        if (Input.GetKey(KeyCode.Keypad8))
         {
             rb.AddForce(new Vector2(0, 5));
         }
 
-        if (Input.GetKey(KeyCode.Alpha4))
+        if (Input.GetKey(KeyCode.Keypad4))
         {
             {
                 rb.AddForce(new Vector2(-5, 0));
             }
 
         }
-        if (Input.GetKey(KeyCode.Alpha5))
+        if (Input.GetKey(KeyCode.Keypad5))
         {
             rb.AddForce(new Vector2(0, -5));
         }
