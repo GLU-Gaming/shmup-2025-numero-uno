@@ -11,9 +11,4 @@ public class BatchChild : MonoBehaviour
         manager.Deactivate(batch, index);
         gameObject.SetActive(false);
     }
-
-    private void OnMouseDown()
-    {
-        Deactivate();
-    }
 }
