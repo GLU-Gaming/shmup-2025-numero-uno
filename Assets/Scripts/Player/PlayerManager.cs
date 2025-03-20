@@ -7,6 +7,11 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody rb;
     public float playerHealth = 10;
     [SerializeField] TMP_Text PlayerHealthTXT;
+    public Transform bulletspawn;
+    public GameObject bulletobj;
+    public bool canshoot = true;
+    public float shootTimer = 0;
+
     private void Start()
     {
         
@@ -20,6 +25,30 @@ public class PlayerManager : MonoBehaviour
         {
             Player.SetActive(false);
         }
+
+        if (shootTimer > 0.2)
+        {
+            canshoot = true;
+            shootTimer = 0;
+        }
+
+
+        if (canshoot == true)
+        if (Input.GetKey(KeyCode.Z))
+        {
+
+            GameObject bullet = Instantiate(bulletobj, bulletspawn.position, bulletspawn.rotation);
+                canshoot = false;
+        }
+
+        if (canshoot == false)
+        {
+            shootTimer += Time.deltaTime;
+        }
+
+
+
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -28,4 +57,6 @@ public class PlayerManager : MonoBehaviour
             playerHealth -= 1;
         }
     }
+
+
 }
