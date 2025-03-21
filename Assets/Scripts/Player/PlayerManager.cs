@@ -4,7 +4,6 @@ using TMPro;
 public class PlayerManager : MonoBehaviour
 {
     public GameObject Player;
-    private Rigidbody rb;
     public float playerHealth = 10;
     [SerializeField] TMP_Text PlayerHealthTXT;
     public Transform bulletspawn;
@@ -14,16 +13,17 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        
-        rb = GetComponent<Rigidbody>();
+
     }
 
     private void Update()
     {
-        PlayerHealthTXT.text = "HP:" + playerHealth;
+      
+
+        Debug.Log(playerHealth);
         if (playerHealth < 1)
         {
-            Player.SetActive(false);
+            Destroy(gameObject);
         }
 
         if (shootTimer > 0.2)
@@ -55,6 +55,7 @@ public class PlayerManager : MonoBehaviour
         if (other.gameObject.CompareTag("HitBox"))
         {
             playerHealth -= 1;
+            PlayerHealthTXT.text = "HP:" + playerHealth;
         }
     }
 
