@@ -7,7 +7,10 @@ public class EnemyGeneral : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GetComponent<BatchChild>().Deactivate();
+        if (other.gameObject.tag == "ScreenExitTrigger")
+        {
+            GetComponent<BatchChild>().Deactivate();
+        }
     }
 
     public void OnHit()

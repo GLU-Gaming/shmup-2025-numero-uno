@@ -2,9 +2,16 @@ using UnityEngine;
 
 public class EnemyBehaviourBase : MonoBehaviour
 {
-    private bool shoots = false;
+    protected bool shoots = false;
 
-    void Update()
+    public Rigidbody rb;
+
+    public void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+    
+    void FixedUpdate()
     {
         MoveBehaviour();
         if (shoots)
@@ -13,12 +20,12 @@ public class EnemyBehaviourBase : MonoBehaviour
         }
     }
 
-    private void ShootBehaviour()
+    public virtual void ShootBehaviour()
     {
 
     }
 
-    private void MoveBehaviour()
+    public virtual void MoveBehaviour()
     {
 
     }
