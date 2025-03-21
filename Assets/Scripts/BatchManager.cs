@@ -105,8 +105,8 @@ public class BatchManager : MonoBehaviour
         return left;
     }
 
-    private void FixedUpdate()
-    {
-        Activate(Vector3.zero, Quaternion.Euler(Vector3.zero));
-    }
+    //private void FixedUpdate()
+    //{
+    //    Activate(Vector3.zero, Quaternion.Euler(Vector3.zero));
+    //}
 }
