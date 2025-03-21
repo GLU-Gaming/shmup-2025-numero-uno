@@ -105,8 +105,8 @@ public class BatchManager : MonoBehaviour
         return left;
     }
 
-    private void OnMouseDown()
+    private void FixedUpdate()
     {
-        Activate();
+        Activate(Vector3.zero, Quaternion.Euler(Vector3.zero));
     }
 }
