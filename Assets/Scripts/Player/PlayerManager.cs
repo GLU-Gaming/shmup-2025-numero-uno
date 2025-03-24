@@ -56,7 +56,7 @@ public class PlayerManager : MonoBehaviour
 
         HighscoreTXT.text = "Score:" + " " + Highscore;
         OLDHighscoreTXT.text = "HighScore:" + " " + OLDHighscore;
-
+    
     }
     private void OnTriggerEnter(Collider other)
     {
