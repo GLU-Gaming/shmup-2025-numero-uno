@@ -4,8 +4,10 @@ using UnityEngine;
 public class EnemyExample : EnemyBehaviourBase
 {
     [SerializeField] private GameObject bulletManagerHolder;
+    [SerializeField] private float shootCooldown;
 
     private BatchManager bulletManager;
+    private float shootTimer = 0;
 
     public new void Start() // put permanent overrides here
     {
@@ -22,7 +24,13 @@ public class EnemyExample : EnemyBehaviourBase
 
     public override void ShootBehaviour() // set shooting code here
     {
-        bulletManager.Activate(transform.position, transform.rotation);
+        shootTimer += Time.deltaTime;
+
+        if (shootTimer > shootCooldown)
+        {
+            bulletManager.Activate(transform.position, transform.rotation);
+            shootTimer -= shootCooldown;
+        }
     }
 
     public override void MoveBehaviour() // set movement code here

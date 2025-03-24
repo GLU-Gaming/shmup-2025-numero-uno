@@ -12,6 +12,7 @@ public class EnemyProjectileGeneral : MonoBehaviour
 
     private void FixedUpdate()
     {
+        timer += Time.deltaTime;
         if (timer > projectileLifetime)
         {
             GetComponent<BatchChild>().Deactivate();
