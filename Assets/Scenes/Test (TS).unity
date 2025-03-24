@@ -455,6 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 4
+  enemyBehaviour: {fileID: 72878563}
 --- !u!54 &72878565
 Rigidbody:
   m_ObjectHideFlags: 0
