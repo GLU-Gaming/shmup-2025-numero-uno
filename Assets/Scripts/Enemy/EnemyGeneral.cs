@@ -5,6 +5,8 @@ public class EnemyGeneral : MonoBehaviour
     [SerializeField] private int maxHealth;
     private int health = 0;
 
+    [SerializeField] private EnemyBehaviourBase enemyBehaviour;
+
     private void OnBecameInvisible()
     {
         GetComponent<BatchChild>().Deactivate();
@@ -18,6 +20,7 @@ public class EnemyGeneral : MonoBehaviour
 
     public void Death()
     {
+        enemyBehaviour.OnDeath();
         GetComponent<BatchChild>().Deactivate();
     }
 }

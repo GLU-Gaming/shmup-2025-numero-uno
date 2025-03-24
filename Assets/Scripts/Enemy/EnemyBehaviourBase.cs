@@ -29,4 +29,9 @@ public class EnemyBehaviourBase : MonoBehaviour
     {
 
     }
+
+    public virtual void OnDeath()
+    {
+
+    }
 }
