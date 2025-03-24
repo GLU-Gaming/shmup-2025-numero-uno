@@ -5,12 +5,9 @@ public class EnemyGeneral : MonoBehaviour
     [SerializeField] private int maxHealth;
     private int health = 0;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnBecameInvisible()
     {
-        if (other.gameObject.tag == "ScreenExitTrigger")
-        {
-            GetComponent<BatchChild>().Deactivate();
-        }
+        GetComponent<BatchChild>().Deactivate();
     }
 
     public void OnHit()

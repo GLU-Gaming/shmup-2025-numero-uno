@@ -3,21 +3,26 @@ using UnityEngine;
 
 public class EnemyExample : EnemyBehaviourBase
 {
+    [SerializeField] private GameObject bulletManagerHolder;
+
+    private BatchManager bulletManager;
+
     public new void Start() // put permanent overrides here
     {
         base.Start();
 
         shoots = true;
+        bulletManager = bulletManagerHolder.GetComponent<BatchManager>();
     }
     
-    void Spawn() // put things that are normally in Start here
+    void OnEnable() // put things that are normally in Start here
     {
         
     }
 
     public override void ShootBehaviour() // set shooting code here
     {
-        //Debug.Log("pew");
+        bulletManager.Activate(transform.position, transform.rotation);
     }
 
     public override void MoveBehaviour() // set movement code here
