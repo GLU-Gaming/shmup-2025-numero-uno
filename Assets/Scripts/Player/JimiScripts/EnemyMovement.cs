@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Transform CurrentPoint;
     public float speed;
     public float UNspeed;
+    public PlayerManager PlayerManager;
 
 
     void Start()
@@ -16,10 +17,10 @@ public class EnemyMovement : MonoBehaviour
         CurrentPoint = PointB.transform;
     }
 
- 
+
     void Update()
     {
-   
+
         Debug.Log(CurrentPoint);
         Vector2 point = CurrentPoint.position - transform.position;
         if (CurrentPoint == PointB.transform)
@@ -39,12 +40,19 @@ public class EnemyMovement : MonoBehaviour
 
         if (Vector2.Distance(transform.position, CurrentPoint.position) < 0.5f && CurrentPoint == PointB.transform)
         {
-            CurrentPoint = PointA.transform;    
+            CurrentPoint = PointA.transform;
         }
 
         if (Vector2.Distance(transform.position, CurrentPoint.position) < 0.5f && CurrentPoint == PointA.transform)
         {
             CurrentPoint = PointB.transform;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayBullet"))
+        {
+            PlayerManager.Kill();
         }
     }
 }
