@@ -26,7 +26,7 @@ public class EnemyExample : EnemyBehaviourBase
     {
         shootTimer += Time.deltaTime;
 
-        if (shootTimer > shootCooldown)
+        while (shootTimer > shootCooldown)
         {
             bulletManager.Activate(transform.position, transform.rotation);
             shootTimer -= shootCooldown;
