@@ -71,7 +71,7 @@ public class BatchManager : MonoBehaviour
             }
         }
 
-        Debug.LogError("ERROR: No Objects Available, Increase Batch Count");
+        Debug.LogError("ERROR: No Objects Available, Increase Batch Count For [" + prefab.name + "] In [" + gameObject.name + "]");
 
         return null; // No available object
     }
