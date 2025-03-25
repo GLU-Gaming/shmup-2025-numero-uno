@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     public float speed;
     public float UNspeed;
     public PlayerManager PlayerManager;
+    [SerializeField]  private  float health = 7;
 
 
     void Start()
@@ -47,12 +48,19 @@ public class EnemyMovement : MonoBehaviour
         {
             CurrentPoint = PointB.transform;
         }
+
+        if (health == 0)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("PlayBullet"))
         {
             PlayerManager.Kill();
+            health -= 1;
         }
+
     }
 }
