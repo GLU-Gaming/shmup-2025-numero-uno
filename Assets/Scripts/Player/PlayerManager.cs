@@ -4,7 +4,7 @@ using TMPro;
 public class PlayerManager : MonoBehaviour
 {
     public GameObject Player;
-    public float playerHealth = 10;
+    public float playerHealth = 5;
     [SerializeField] TMP_Text PlayerHealthTXT;
     [SerializeField] TMP_Text HighscoreTXT;
     [SerializeField] TMP_Text OLDHighscoreTXT;
