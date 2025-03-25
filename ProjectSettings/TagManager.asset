@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - HitBox
+  - Enemy
+  - ScreenExitTrigger
+  - PlayBullet
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX

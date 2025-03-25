@@ -8,6 +8,7 @@ public class BatchManager : MonoBehaviour
 
     [SerializeField] private int totalBatches;
 
+    [SerializeField] private Vector3 spawn;
     void Start()
     {
         batches = new ulong[totalBatches];
@@ -71,7 +72,7 @@ public class BatchManager : MonoBehaviour
             }
         }
 
-        Debug.LogError("ERROR: No Objects Available, Increase Batch Count");
+        Debug.LogError("ERROR: No Objects Available, Increase Batch Count For [" + prefab.name + "] In [" + gameObject.name + "]");
 
         return null; // No available object
     }
@@ -105,8 +106,15 @@ public class BatchManager : MonoBehaviour
         return left;
     }
 
-    private void OnMouseDown()
+
+    float timer = 0;
+    void Update()
     {
-        Activate();
+        timer += Time.deltaTime;
+        if (timer > 5 && spawn != Vector3.zero)
+        {
+            timer -= 5;
+            Activate(spawn, Quaternion.Euler(Vector3.zero));
+        }
     }
 }
