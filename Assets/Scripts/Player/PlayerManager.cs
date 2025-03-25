@@ -8,31 +8,25 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] TMP_Text PlayerHealthTXT;
     [SerializeField] TMP_Text HighscoreTXT;
     [SerializeField] TMP_Text OLDHighscoreTXT;
-    public Transform bulletspawn;
-    public GameObject bulletobj;
+    [SerializeField] private GameObject bulletManagerHolder;
+    private BatchManager bulletManager;
     public bool canshoot = true;
     public float shootTimer = 0;
-    public float Highscore = 0;
-    public float OLDHighscore = 0;
+    public int Highscore = 0;
+    public int OLDHighscore = 0;
 
     private void Start()
     {
         PlayerHealthTXT.text = "HP:" + playerHealth;
-        HighscoreTXT.text = "Score:" + " " + Highscore;
-        OLDHighscore = PlayerPrefs.GetFloat("Highscore");
+        HighscoreTXT.text = "Score:" + " " + Highscore + "00";
+        OLDHighscore = PlayerPrefs.GetInt("Highscore");
+        OLDHighscoreTXT.text = "HighScore:" + " " + OLDHighscore + "00";
+
+        bulletManager = bulletManagerHolder.GetComponent<BatchManager>();
     }
 
     private void Update()
     {
-      
-        SaveData();
-
-        Debug.Log(playerHealth);
-        if (playerHealth < 1)
-        {
-            Destroy(gameObject);
-        }
-
         if (shootTimer > 0.2)
         {
             canshoot = true;
@@ -41,36 +35,47 @@ public class PlayerManager : MonoBehaviour
 
 
         if (canshoot == true)
-        if (Input.GetKey(KeyCode.Z))
         {
-
-            GameObject bullet = Instantiate(bulletobj, bulletspawn.position, bulletspawn.rotation);
+            if (Input.GetKey(KeyCode.Z))
+            {
+                bulletManager.Activate(transform.position, transform.rotation);
                 canshoot = false;
+            }
         }
 
         if (canshoot == false)
         {
             shootTimer += Time.deltaTime;
         }
-
-
-        HighscoreTXT.text = "Score:" + " " + Highscore;
-        OLDHighscoreTXT.text = "HighScore:" + " " + OLDHighscore;
-    
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("HitBox"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyProjectile"))
         {
-            playerHealth -= 1;
-            PlayerHealthTXT.text = "HP:" + playerHealth;
+            OnHit();
+
+            if (other.gameObject.CompareTag("EnemyProjectile"))
+            {
+                other.gameObject.GetComponent<BatchChild>().Deactivate();
+            }
         }
     }
 
+    public void OnHit()
+    {
+        playerHealth -= 1;
+        PlayerHealthTXT.text = "HP:" + playerHealth;
+    }
 
     public void Kill()
     {
-        Highscore += 100;
+        Highscore += 1;
+
+        SaveData();
+
+        HighscoreTXT.text = "Score:" + " " + Highscore + "00";
+        OLDHighscoreTXT.text = "HighScore:" + " " + OLDHighscore + "00";
     }    
 
     public void SaveData()
@@ -78,7 +83,7 @@ public class PlayerManager : MonoBehaviour
         if (Highscore > OLDHighscore)
         {
             OLDHighscore = Highscore;
-            PlayerPrefs.SetFloat("Highscore", Highscore);
+            PlayerPrefs.SetInt("Highscore", Highscore);
         }
     }
 

@@ -8,6 +8,7 @@ public class BatchManager : MonoBehaviour
 
     [SerializeField] private int totalBatches;
 
+    [SerializeField] private Vector3 spawn;
     void Start()
     {
         batches = new ulong[totalBatches];
@@ -105,8 +106,15 @@ public class BatchManager : MonoBehaviour
         return left;
     }
 
-    void OnMouseDown()
+
+    float timer = 0;
+    void Update()
     {
-        Activate(new Vector3(-14f, 6f, 0f), Quaternion.Euler(Vector3.zero));
+        timer += Time.deltaTime;
+        if (timer > 5 && spawn != Vector3.zero)
+        {
+            timer -= 5;
+            Activate(spawn, Quaternion.Euler(Vector3.zero));
+        }
     }
 }

@@ -21,9 +21,9 @@ public class EnemyProjectileGeneral : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            //collision.gameObject.GetComponent<PlayerManager>().OnHit();
+            collision.gameObject.GetComponent<PlayerManager>().OnHit();
             GetComponent<BatchChild>().Deactivate();
         }
     }

@@ -7,9 +7,16 @@ public class EnemyGeneral : MonoBehaviour
 
     [SerializeField] private EnemyBehaviourBase enemyBehaviour;
 
+    [SerializeField] private GameObject player;
+
     private void OnBecameInvisible()
     {
         GetComponent<BatchChild>().Deactivate();
+    }
+
+    private void OnEnable()
+    {
+        health = maxHealth;
     }
 
     public void OnHit()
@@ -20,6 +27,7 @@ public class EnemyGeneral : MonoBehaviour
 
     public void Death()
     {
+        player?.GetComponent<PlayerManager>().Kill();
         enemyBehaviour.OnDeath();
         GetComponent<BatchChild>().Deactivate();
     }
