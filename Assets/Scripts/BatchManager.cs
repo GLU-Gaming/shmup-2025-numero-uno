@@ -107,6 +107,6 @@ public class BatchManager : MonoBehaviour
 
     void OnMouseDown()
     {
-        Activate(new Vector3(14.5f, 0f, 0f), Quaternion.Euler(Vector3.zero));
+        Activate(new Vector3(-14f, 6f, 0f), Quaternion.Euler(Vector3.zero));
     }
 }

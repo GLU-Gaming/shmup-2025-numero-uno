@@ -6,6 +6,6 @@ public class EnemyProjectileExample : EnemyProjectileBase
 
     public override void MoveBehaviour()
     {
-        rb.linearVelocity = new Vector3(-speed, 0, 0);
+        rb.linearVelocity = speed * transform.right;
     }
 }
