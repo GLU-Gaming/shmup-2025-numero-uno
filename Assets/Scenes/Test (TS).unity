@@ -487,7 +487,7 @@ MonoBehaviour:
   endDirection: {x: -0.87, y: -0.5, z: 0}
   timeTurnStart: 1.5
   timeTurnDuration: 2.5
-  projectiles: 8
+  projectiles: 24
 --- !u!1 &743838626
 GameObject:
   m_ObjectHideFlags: 0
