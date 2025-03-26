@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -64,6 +65,11 @@ public class PlayerManager : MonoBehaviour
 
     public void OnHit()
     {
+        if (playerHealth <= 0)
+        {
+            SceneManager.LoadScene("LoseScreen");
+        }
+
         playerHealth -= 1;
         PlayerHealthTXT.text = "HP:" + playerHealth;
     }
