@@ -4,6 +4,8 @@ public class Movement : MonoBehaviour
 {
     private Rigidbody rb;
 
+    [SerializeField] private float speed;
+    [SerializeField] private float shiftFactor;
 
     private void Start()
     {
@@ -12,54 +14,37 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            {
-                rb.AddForce(new Vector2(20, 0));
-            }
+        Vector3 velocity = Vector3.zero;
 
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Keypad8))
         {
-            rb.AddForce(new Vector2(0, 20));
+            velocity += new Vector3(0, 1, 0);
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.Keypad2))
         {
-            {
-                rb.AddForce(new Vector2(-20, 0));
-            }
-
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            rb.AddForce(new Vector2(0, -20));
+            velocity += new Vector3(0, -1, 0);
         }
 
-
-
-        if (Input.GetKey(KeyCode.Keypad6))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.Keypad6))
         {
-            {
-                rb.AddForce(new Vector2(20, 0));
-            }
-
-        }
-        if (Input.GetKey(KeyCode.Keypad8))
-        {
-            rb.AddForce(new Vector2(0, 20));
+            velocity += new Vector3(1, 0, 0);
         }
 
-        if (Input.GetKey(KeyCode.Keypad4))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.Keypad4))
         {
-            {
-                rb.AddForce(new Vector2(-20, 0));
-            }
+            velocity += new Vector3(-1, 0, 0);
+        }
 
-        }
-        if (Input.GetKey(KeyCode.Keypad5))
+        velocity.Normalize();
+
+        velocity *= speed;
+
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            rb.AddForce(new Vector2(0, -20));
+            velocity *= shiftFactor;
         }
+
+        rb.linearVelocity = velocity;
     }
 }

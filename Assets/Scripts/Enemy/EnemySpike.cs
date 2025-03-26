@@ -8,6 +8,7 @@ public class EnemySpike : EnemyBehaviourBase
     private BatchManager bulletManager;
 
     [SerializeField] private float speed;
+    [SerializeField] private float spinSpeed;
 
     [SerializeField] private Vector3 startDirection;
     [SerializeField] private Vector3 endDirection;
@@ -38,6 +39,8 @@ public class EnemySpike : EnemyBehaviourBase
         Vector3 velocity = speed * Vector3.Lerp(startDirection, endDirection, (movementTimer - timeTurnStart) / timeTurnDuration).normalized;
 
         rb.linearVelocity = velocity;
+
+        rb.angularVelocity = new Vector3(0, spinSpeed, 0);
     }
 
     public override void OnDeath()
