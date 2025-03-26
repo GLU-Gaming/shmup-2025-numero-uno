@@ -12,8 +12,10 @@ public class EnemyProjectileBomb : EnemyProjectileBase
 
     private float boomTimer = 0;
 
-    void Start()
+    new void Start()
     {
+        base.Start();
+
         fragmentManager = fragmentManagerHolder.GetComponent<BatchManager>();
     }
 
