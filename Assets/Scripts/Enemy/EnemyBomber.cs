@@ -27,7 +27,8 @@ public class EnemyBomber : EnemyBehaviourBase
 
     void OnEnable() // put things that are normally in Start here
     {
-
+        shootTimer = 0;
+        bombTimer = 0;
     }
 
     public override void ShootBehaviour() // set shooting code here
@@ -37,20 +38,20 @@ public class EnemyBomber : EnemyBehaviourBase
 
         while (shootTimer > shootCooldown)
         {
-            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 40));
-            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 45));
-            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 50));
+            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 215));
+            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 225));
+            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 235));
 
-            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, -40));
-            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, -45));
-            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, -50));
+            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 145));
+            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 135));
+            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 125));
 
             shootTimer -= shootCooldown;
         }
 
         while (bombTimer > bombCooldown)
         {
-            bombManager.Activate(transform.position, transform.rotation);
+            bombManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 180));
 
             bombTimer -= bombCooldown;
         }
