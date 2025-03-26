@@ -16,6 +16,8 @@ public class PlayerManager : MonoBehaviour
     public int Highscore = 0;
     public int OLDHighscore = 0;
 
+    [SerializeField] Vector3 spawnPos;
+
     private void Start()
     {
         PlayerHealthTXT.text = "HP:" + playerHealth;
@@ -72,6 +74,9 @@ public class PlayerManager : MonoBehaviour
 
         playerHealth -= 1;
         PlayerHealthTXT.text = "HP:" + playerHealth;
+
+        transform.position = spawnPos;
+        // TODO: IFrames
     }
 
     public void Kill()
