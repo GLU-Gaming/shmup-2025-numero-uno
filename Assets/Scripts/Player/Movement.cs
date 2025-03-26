@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
             velocity += new Vector3(0, 1, 0);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.Keypad2))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.Keypad2) || Input.GetKey(KeyCode.Keypad5))
         {
             velocity += new Vector3(0, -1, 0);
         }
