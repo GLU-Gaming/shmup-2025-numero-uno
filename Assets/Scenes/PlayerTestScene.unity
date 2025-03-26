@@ -3458,7 +3458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 2081759813}
   totalBatches: 1
-  spawn: {x: -15.5, y: 7, z: 0}
+  spawn: {x: -15.5, y: 5, z: 0}
 --- !u!4 &1055992538
 Transform:
   m_ObjectHideFlags: 0
@@ -5029,6 +5029,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 64e335e256ad85f41aed8f3cbacfffd1, type: 2}
+    - target: {fileID: 4747752638172660724, guid: 7ace8cf1cbf2dcc488174505d66ad81a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747752638172660724, guid: 7ace8cf1cbf2dcc488174505d66ad81a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747752638172660724, guid: 7ace8cf1cbf2dcc488174505d66ad81a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4770592400472550545, guid: 7ace8cf1cbf2dcc488174505d66ad81a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5047,7 +5059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6250646907139690220, guid: 7ace8cf1cbf2dcc488174505d66ad81a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6467481202613131573, guid: 7ace8cf1cbf2dcc488174505d66ad81a, type: 3}
       propertyPath: player
@@ -5067,7 +5079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7959680408405945581, guid: 7ace8cf1cbf2dcc488174505d66ad81a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 6.49
       objectReference: {fileID: 0}
     - target: {fileID: 7959680408405945581, guid: 7ace8cf1cbf2dcc488174505d66ad81a, type: 3}
       propertyPath: m_LocalPosition.z
