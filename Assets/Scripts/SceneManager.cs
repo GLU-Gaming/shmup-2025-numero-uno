@@ -12,6 +12,10 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene(2);
+    }
 
 
     public void QuitGame()
