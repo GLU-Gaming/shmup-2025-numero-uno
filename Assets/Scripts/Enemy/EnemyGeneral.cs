@@ -9,12 +9,7 @@ public class EnemyGeneral : MonoBehaviour
 
     [SerializeField] private GameObject player;
 
-    private void OnBecameInvisible()
-    {
-        GetComponent<BatchChild>().Deactivate();
-    }
-
-    void Update()
+    void FixedUpdate()
     {
         if (transform.position.x > 20 || transform.position.x < -20 || transform.position.y > 20 || transform.position.y < -20)
         {
