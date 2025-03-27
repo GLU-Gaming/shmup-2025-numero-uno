@@ -37,7 +37,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        if (shootTimer > 0.2)
+        if (shootTimer > 0.15)
         {
             canshoot = true;
             shootTimer = 0;
