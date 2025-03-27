@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -15,12 +16,21 @@ public class PlayerManager : MonoBehaviour
     public int Highscore = 0;
     public int OLDHighscore = 0;
 
+    [SerializeField] Vector3 spawnPos;
+
+    [SerializeField] float invincibilityTime;
+    
+    private float invincibilityTimer;
+    private bool invincible = true;
+
     private void Start()
     {
         PlayerHealthTXT.text = "HP:" + playerHealth;
         HighscoreTXT.text = "Score:" + " " + Highscore + "00";
         OLDHighscore = PlayerPrefs.GetInt("Highscore");
         OLDHighscoreTXT.text = "HighScore:" + " " + OLDHighscore + "00";
+
+        invincibilityTimer = invincibilityTime;
 
         bulletManager = bulletManagerHolder.GetComponent<BatchManager>();
     }
@@ -49,6 +59,21 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        if (invincible)
+        {
+            transform.GetChild(0).gameObject.SetActive((Time.frameCount & 0xf) < 8);
+            invincibilityTimer -= Time.deltaTime;
+
+            if (invincibilityTimer < 0)
+            {
+                invincible = false;
+                transform.GetChild(0).gameObject.SetActive(true);
+            }
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyProjectile"))
@@ -64,8 +89,23 @@ public class PlayerManager : MonoBehaviour
 
     public void OnHit()
     {
-        playerHealth -= 1;
-        PlayerHealthTXT.text = "HP:" + playerHealth;
+        if (!invincible)
+        {
+            if (playerHealth <= 0)
+            {
+                SceneManager.LoadScene("LoseScreen");
+            } 
+            else
+            {
+                playerHealth -= 1;
+                PlayerHealthTXT.text = "HP:" + playerHealth;
+            }
+
+            transform.position = spawnPos;
+
+            invincible = true;
+            invincibilityTimer = invincibilityTime;
+        }
     }
 
     public void Kill()

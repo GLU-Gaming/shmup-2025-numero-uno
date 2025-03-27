@@ -17,10 +17,10 @@ public class EnemyProjectileGeneral : MonoBehaviour
         {
             GetComponent<BatchChild>().Deactivate();
         }
-    }
 
-    private void OnBecameInvisible()
-    {
-        GetComponent<BatchChild>().Deactivate();
+        if (transform.position.x > 15.5 || transform.position.x < -15.5 || transform.position.y > 8.75 || transform.position.y < -8.75)
+        {
+            GetComponent<BatchChild>().Deactivate();
+        }
     }
 }
