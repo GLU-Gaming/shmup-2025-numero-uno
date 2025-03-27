@@ -18,7 +18,9 @@ public class Enemy3 : EnemyBehaviourBase
 
     public override void MoveBehaviour() // set movement code here
     {
+        movementTimer += Time.deltaTime;
 
+        
     }
     public override void OnDeath()
     {
