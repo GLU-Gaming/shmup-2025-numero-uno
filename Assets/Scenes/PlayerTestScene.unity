@@ -3000,7 +3000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  shiftFactor: 0.2
+  shiftFactor: 0.3
 --- !u!114 &730108089
 MonoBehaviour:
   m_ObjectHideFlags: 0
