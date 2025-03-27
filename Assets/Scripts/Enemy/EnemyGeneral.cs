@@ -14,6 +14,14 @@ public class EnemyGeneral : MonoBehaviour
         GetComponent<BatchChild>().Deactivate();
     }
 
+    void Update()
+    {
+        if (transform.position.x > 20 || transform.position.x < -20 || transform.position.y > 20 || transform.position.y < -20)
+        {
+            GetComponent<BatchChild>().Deactivate();
+        }
+    }
+
     private void OnEnable()
     {
         health = maxHealth;
