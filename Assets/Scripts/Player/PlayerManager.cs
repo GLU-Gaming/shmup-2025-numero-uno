@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     public float shootTimer = 0;
     public int Highscore = 0;
     public int OLDHighscore = 0;
+    public HealthScript healthScript;
 
     [SerializeField] Vector3 spawnPos;
 
@@ -98,6 +99,7 @@ public class PlayerManager : MonoBehaviour
             else
             {
                 playerHealth -= 1;
+                healthScript.healthtest();
                 PlayerHealthTXT.text = "HP:" + playerHealth;
             }
 
