@@ -7,6 +7,11 @@ public class BossGeneral : MonoBehaviour
 
     public bool invincible = false;
 
+    private void OnEnable()
+    {
+        health = maxHealth;
+    }
+
     public void OnHit()
     {
         if (!invincible)
