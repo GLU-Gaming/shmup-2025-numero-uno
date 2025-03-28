@@ -7,7 +7,7 @@ public class HighscoreShowOff : MonoBehaviour
     [SerializeField] TMP_Text OLDHighscoreTXT;
     void Start()
     {
-        OLDHighscore = PlayerPrefs.GetFloat("Highscore");
+        OLDHighscore = PlayerPrefs.GetInt("Highscore");
     }
 
 
