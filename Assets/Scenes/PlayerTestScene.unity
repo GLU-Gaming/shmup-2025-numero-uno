@@ -1607,6 +1607,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457079686}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &564343664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8571196105558976924, guid: 19126d8368572814f94b94c839506f5d, type: 3}
+  m_PrefabInstance: {fileID: 1455415284}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &566471737
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,6 +3221,9 @@ MonoBehaviour:
   healthScript: {fileID: 1062514307}
   spawnPos: {x: -7, y: 0, z: 0}
   invincibilityTime: 1.5
+  haloWobbleSpeed: 1
+  haloWobbleAmplitude: 10
+  halo: {fileID: 564343664}
 --- !u!135 &730108090
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5344,6 +5352,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19126d8368572814f94b94c839506f5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6322083333958520748, guid: 19126d8368572814f94b94c839506f5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -6322083333958520748, guid: 19126d8368572814f94b94c839506f5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -6322083333958520748, guid: 19126d8368572814f94b94c839506f5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6322083333958520748, guid: 19126d8368572814f94b94c839506f5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6322083333958520748, guid: 19126d8368572814f94b94c839506f5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -6322083333958520748, guid: 19126d8368572814f94b94c839506f5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5766850350892014362, guid: 19126d8368572814f94b94c839506f5d, type: 3}
