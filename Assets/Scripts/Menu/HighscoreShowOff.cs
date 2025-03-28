@@ -13,6 +13,6 @@ public class HighscoreShowOff : MonoBehaviour
 
     void Update()
     {
-        OLDHighscoreTXT.text = "HighScore:" + " " + OLDHighscore;
+        OLDHighscoreTXT.text = "HighScore: " + OLDHighscore + "00";
     }
 }
