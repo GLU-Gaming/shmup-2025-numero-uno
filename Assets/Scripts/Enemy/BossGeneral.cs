@@ -10,6 +10,11 @@ public class BossGeneral : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void OnEnable()
+    {
+        health = maxHealth;
+    }
+
     public void OnHit()
     {
         health--;
