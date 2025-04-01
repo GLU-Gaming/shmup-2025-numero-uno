@@ -9,6 +9,7 @@ TagManager:
   - ScreenExitTrigger
   - PlayBullet
   - EnemyProjectile
+  - Background
   layers:
   - Default
   - TransparentFX
