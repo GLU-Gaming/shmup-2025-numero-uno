@@ -9,6 +9,7 @@ public class HitboxIndicator : MonoBehaviour
     [SerializeField] float indicatorMaxSize;
     [SerializeField] float growFactor;
     [SerializeField] float constantGrowth;
+    [SerializeField] float rotationSpeed;
 
     [SerializeField] RectTransform canvas;
 
@@ -27,14 +28,16 @@ public class HitboxIndicator : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            indicatorSize += (indicatorMaxSize - indicatorSize) * Time.deltaTime * growFactor + constantGrowth * Time.deltaTime;
+            indicatorSize += (indicatorMaxSize - indicatorSize) * Time.deltaTime * growFactor + constantGrowth * Time.deltaTime * indicatorMaxSize;
             if (indicatorSize > indicatorMaxSize) indicatorSize = indicatorMaxSize;
         } else
         {
-            indicatorSize -= indicatorSize * Time.deltaTime * growFactor + constantGrowth * Time.deltaTime;
+            indicatorSize -= indicatorSize * Time.deltaTime * growFactor + constantGrowth * Time.deltaTime * indicatorMaxSize;
             if (indicatorSize < 0) indicatorSize = 0;
         }
 
         indicator.transform.localScale = indicatorSize * new Vector3(1, 1, 1);
+
+        indicator.transform.rotation *= Quaternion.Euler(0, 0, rotationSpeed * Time.deltaTime);
     }
 }
