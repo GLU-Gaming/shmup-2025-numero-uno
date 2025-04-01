@@ -3113,9 +3113,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 730108082}
   indicator: {fileID: 1112761927}
-  indicatorMaxSize: 1
+  indicatorMaxSize: 2
   growFactor: 4
   constantGrowth: 1
+  rotationSpeed: 45
   canvas: {fileID: 1062130413}
 --- !u!114 &1062514307 stripped
 MonoBehaviour:
@@ -3185,7 +3186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1697402562, guid: e9514deed3cf3ca45861cba6d1f3b22f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
