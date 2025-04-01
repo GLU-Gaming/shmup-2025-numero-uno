@@ -33,6 +33,14 @@ public class BossSkull : MonoBehaviour
         bossGeneral.invincible = false;
     }
 
+    private void OnDisable()
+    {
+        if (bossGeneral.invincible)
+        {
+            ChangePhase();
+        }
+    }
+
     private void Update()
     {
         phaseTimer -= Time.deltaTime;
