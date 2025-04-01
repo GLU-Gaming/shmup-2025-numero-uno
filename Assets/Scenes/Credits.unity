@@ -626,8 +626,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Daniel Broers\nGray Stempher\nJaylen Coll\xE9\nJasper Leejien\nLucan van
-    der Meer\nTwan van Kemenade\nAngelos Nithvrianakis\n\n\n\n\n\nJiminash van Duuren\nLucan
-    van der Meer"
+    der Meer\nTwan van Kemenade\nAngelos Nithvrianakis\n \n\n\n\n\nJiminash van Duuren\nLucan
+    van der Meer\n\n\n\n\nTwan van Kemenade\nGray Stempher\nJasper Leejien\nAngelos
+    Nithvrianakis\n\n\n\nDaniel Broers\nJasper Leejien\nAngelos Nithvrianakis\nGray
+    Stempher\nJaylen Coll\xE9\n\n\n\n\nJiminash van Duuren\nLucan van der Meer\n\n\n\n\nTwan
+    van Kemenade\nGray Stempher\n\n\n\n\nJiminash van Duuren\n\n\n\n\n\nJiminash
+    van Duuren\n\n\n\n\n\n\nJiminash van Duuren\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -853,7 +857,7 @@ Transform:
   m_GameObject: {fileID: 1475496533}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 19.7, z: -22.4}
+  m_LocalPosition: {x: 42.9, y: 19.7, z: -47.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1019,7 +1023,7 @@ Transform:
   m_GameObject: {fileID: 1501164798}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 21.8, y: -142.5, z: 20}
+  m_LocalPosition: {x: 21.8, y: -278.9, z: 20}
   m_LocalScale: {x: 4, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1075,6 +1079,41 @@ MonoBehaviour:
     Developers:
 
 
+
+
+    2D Artist:
+
+
+
+
+    3D Artists:
+
+
+
+
+
+    Game
+    Programmers:
+
+
+
+
+    UI Artists:
+
+
+
+
+    Marketing:
+
+
+
+    Music production:
+
+
+
+
+    Sound
+    Production:
 
 
 '
