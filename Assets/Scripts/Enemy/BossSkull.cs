@@ -135,9 +135,6 @@ public class BossSkull : MonoBehaviour
                 // Set black material for background, white for everything else
                 rend.material = rend.gameObject.CompareTag("Background") ? blackMaterial : whiteMaterial;
             }
-
-            originalBackgroundColor = mainCamera.backgroundColor;
-            mainCamera.backgroundColor = Color.black;
         } else
         {
             phaseTimer = normalTime;
@@ -155,8 +152,6 @@ public class BossSkull : MonoBehaviour
 
             // Clear dictionary to reset for next phase change
             originalMaterials.Clear();
-
-            mainCamera.backgroundColor = originalBackgroundColor;
         }
     }
 }
