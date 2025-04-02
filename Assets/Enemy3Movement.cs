@@ -12,14 +12,15 @@ public class Enemy3Movement : MonoBehaviour
     public Transform bulletspawn2;
     public bool shootable1 = false;
     public bool shootable2 = false;
-    public float EnemyHealth = 20;
+    public float EnemyHealth = 40;
+    private Rigidbody rb;
     void Start()
     {
-        
 
+        rb = GetComponent<Rigidbody>();
 
         //all fuctions called on spawn
-isMoving = true;  
+        isMoving = true;  
         timerStart = true;
         shootable1 = true;
         shootable2 = true;
