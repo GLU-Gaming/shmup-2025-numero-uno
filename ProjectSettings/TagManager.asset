@@ -10,6 +10,7 @@ TagManager:
   - PlayBullet
   - EnemyProjectile
   - Background
+  - EnemyBoss
   layers:
   - Default
   - TransparentFX
