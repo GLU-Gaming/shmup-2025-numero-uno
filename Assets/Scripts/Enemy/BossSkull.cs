@@ -25,8 +25,26 @@ public class BossSkull : MonoBehaviour
 
     private Vector3 targetPos;
 
+    [SerializeField] GameObject lazerManagerHolder;
+    [SerializeField] GameObject bulletManagerHolder;
+    [SerializeField] GameObject aimerManagerHolder;
+    [SerializeField] GameObject spikeEnemyManagerHolder;
+
+    private BatchManager lazerManager;
+    private BatchManager bulletManager;
+    private BatchManager aimerManager;
+    private BatchManager spikeEnemyManager;
+
+    private GameObject lazer1 = null;
+    private GameObject lazer2 = null;
+
     private void Start()
     {
+        lazerManager = lazerManagerHolder.GetComponent<BatchManager>();
+        bulletManager = bulletManagerHolder.GetComponent<BatchManager>();
+        aimerManager = aimerManagerHolder.GetComponent<BatchManager>();
+        spikeEnemyManager = spikeEnemyManagerHolder.GetComponent<BatchManager>();
+
         mainCamera = Camera.main;
         if (mainCamera != null)
         {
@@ -85,7 +103,8 @@ public class BossSkull : MonoBehaviour
 
     private void InvincibleStart()
     {
-        // lazers
+        lazer1 = lazerManager.Activate(new Vector3(0f, 8f, 0f), Quaternion.Euler(Vector3.zero));
+        lazer2 = lazerManager.Activate(new Vector3(0f, -8f, 0f), Quaternion.Euler(Vector3.zero));
     }
 
     private void ChangePhase()
