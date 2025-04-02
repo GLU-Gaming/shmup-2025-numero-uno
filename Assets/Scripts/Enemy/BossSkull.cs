@@ -18,6 +18,13 @@ public class BossSkull : MonoBehaviour
 
     private float phaseTimer;
 
+    private bool altNormal;
+
+    [SerializeField] float speedFactor;
+    [SerializeField] float constantSpeed;
+
+    private Vector3 targetPos;
+
     private void Start()
     {
         mainCamera = Camera.main;
@@ -30,7 +37,11 @@ public class BossSkull : MonoBehaviour
     private void OnEnable()
     {
         phaseTimer = normalTime;
+        altNormal = false;
         bossGeneral.invincible = false;
+
+        transform.position = new Vector3(17f, 0f, 0f);
+        targetPos = new Vector3(8.5f, 0f, 0f);
     }
 
     private void OnDisable()
@@ -49,6 +60,32 @@ public class BossSkull : MonoBehaviour
         {
             ChangePhase();
         }
+
+        // movement and shit
+        if (bossGeneral.invincible)
+        {
+            targetPos = new Vector3(8.5f, 0f, 0f);
+
+            // bullet tornado
+
+            // move lazers
+        } else
+        {
+            if (altNormal)
+            {
+
+            } else
+            {
+
+            }
+        }
+
+        transform.position += (targetPos - transform.position) * Time.deltaTime * speedFactor + constantSpeed * Time.deltaTime * targetPos;
+    }
+
+    private void InvincibleStart()
+    {
+        // lazers
     }
 
     private void ChangePhase()
@@ -58,6 +95,8 @@ public class BossSkull : MonoBehaviour
         if (bossGeneral.invincible)
         {
             phaseTimer = invincableTime;
+
+            InvincibleStart();
 
             // Find all renderers in the scene
             Renderer[] renderers = FindObjectsByType<Renderer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -83,6 +122,8 @@ public class BossSkull : MonoBehaviour
         } else
         {
             phaseTimer = normalTime;
+
+            altNormal = !altNormal;
 
             // Restore original materials
             foreach (var entry in originalMaterials)
