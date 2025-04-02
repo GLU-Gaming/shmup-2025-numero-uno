@@ -3112,6 +3112,10 @@ MonoBehaviour:
   bossGeneral: {fileID: 1361918166}
   speedFactor: 1
   constantSpeed: 0.1
+  lazerManagerHolder: {fileID: 0}
+  bulletManagerHolder: {fileID: 0}
+  aimerManagerHolder: {fileID: 0}
+  spikeEnemyManagerHolder: {fileID: 0}
 --- !u!114 &1361918166
 MonoBehaviour:
   m_ObjectHideFlags: 0
