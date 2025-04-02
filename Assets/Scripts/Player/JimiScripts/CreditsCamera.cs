@@ -6,7 +6,7 @@ public class CreditsCamera : MonoBehaviour
 
     void Update()
     {
-        // Move the camera downward over time
+     
         transform.position += Vector3.down * speed * Time.deltaTime;
     }
 }

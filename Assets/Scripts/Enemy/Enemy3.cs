@@ -4,7 +4,10 @@ public class Enemy3 : EnemyBehaviourBase
 {
     [SerializeField] private float speed;
     private float movementTimer = 0;
-
+    public float shootTimer = 0;
+    public GameObject bulletobj;
+    public Transform bulletspawn1;
+    public Transform bulletspawn2;
 
     public new void Start()
     {
