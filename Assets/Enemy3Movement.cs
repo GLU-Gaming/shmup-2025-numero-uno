@@ -20,6 +20,8 @@ public class Enemy3Movement : MonoBehaviour
         //all fuctions called on spawn
 isMoving = true;  
         timerStart = true;
+        shootable1 = true;
+        shootable2 = true;
     }
 
 
