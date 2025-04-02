@@ -12,6 +12,7 @@ public class Enemy3Movement : MonoBehaviour
     public Transform bulletspawn2;
     public bool shootable1 = false;
     public bool shootable2 = false;
+    public float EnemyHealth = 20;
     void Start()
     {
         
@@ -69,6 +70,24 @@ isMoving = true;
             shootTimer = 0;
         }
 
+
+
+
+        if (EnemyHealth == 0)
+        {
+            Destroy(gameObject);
+        }
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayBullet"))
+        {
+          
+            EnemyHealth -= 1;
+        }
 
     }
 }
