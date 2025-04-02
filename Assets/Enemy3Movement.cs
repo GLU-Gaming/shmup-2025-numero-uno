@@ -10,6 +10,8 @@ public class Enemy3Movement : MonoBehaviour
     public GameObject bulletobj;
     public Transform bulletspawn1;
     public Transform bulletspawn2;
+    public bool shootable1 = false;
+    public bool shootable2 = false;
     void Start()
     {
         
@@ -46,18 +48,21 @@ isMoving = true;
         }
 
         shootTimer += Time.deltaTime;
-        if (shootTimer > 4)
+        if (shootTimer > 4 && shootable1)
         {
             Instantiate(bulletobj, bulletspawn1.position, bulletspawn1.rotation);
-
+            shootable1 = false;
         }
-        if (shootTimer > 4.5)
+        if (shootTimer > 4.5 && shootable2)
         {
             Instantiate(bulletobj, bulletspawn2.position, bulletspawn2.rotation);
+            shootable2 = false;
         }
         if (shootTimer > 5)
         {
             Instantiate(bulletobj, bulletspawn1.position, bulletspawn1.rotation);
+            shootable1 = true;
+            shootable2 = true;
 
             shootTimer = 0;
         }
