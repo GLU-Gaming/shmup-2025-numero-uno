@@ -23,6 +23,11 @@ public class Bullet : MonoBehaviour
             other.gameObject.GetComponent<EnemyGeneral>().OnHit();
 
             GetComponent<BatchChild>().Deactivate();
+        } else if (other.gameObject.CompareTag("EnemyBoss"))
+        {
+            other.gameObject.GetComponent<BossGeneral>().OnHit();
+
+            GetComponent<BatchChild>().Deactivate();
         }
     }
 
