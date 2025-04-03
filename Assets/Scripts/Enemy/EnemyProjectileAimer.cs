@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyProjectileAimer : EnemyProjectileBase
 {
     [SerializeField] float normalSpeed;
+    [SerializeField] float startSpeed;
     [SerializeField] float slowSpeed;
 
     [SerializeField] float timeUntilTurn;
@@ -17,8 +18,6 @@ public class EnemyProjectileAimer : EnemyProjectileBase
     new void Start()
     {
         base.Start();
-
-        
     }
 
     void OnEnable() // put things that are normally in Start here
@@ -38,7 +37,7 @@ public class EnemyProjectileAimer : EnemyProjectileBase
         {
             timer -= Time.deltaTime;
 
-            speed = Mathf.Lerp(slowSpeed, normalSpeed, timer / timeUntilTurn);
+            speed = Mathf.Lerp(slowSpeed, startSpeed, timer / timeUntilTurn);
 
             if (timer < 0)
             {
