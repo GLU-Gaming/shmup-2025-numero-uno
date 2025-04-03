@@ -1233,6 +1233,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338822389}
   m_CullTransparentMesh: 1
+--- !u!1001 &340589985
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -509.50342
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -305.33984
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_Name
+      value: Deer skull boss (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
 --- !u!1 &436646920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,6 +1643,63 @@ Transform:
   - {fileID: 1713121088}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &584107855
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -683.0912
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -717.64856
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
+      propertyPath: m_Name
+      value: Deer skull boss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d49978cd7926b64299a991c94cb1183, type: 3}
 --- !u!1001 &605726718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3105,17 +3219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f9d833e4518f24c90637d6668b356f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackMaterial: {fileID: 2100000, guid: 1e76079ea3f0d154589a47aa63f36fca, type: 2}
-  whiteMaterial: {fileID: 2100000, guid: 6c64a6e4db4162c41a92a0a040141367, type: 2}
   normalTime: 20
   invincableTime: 10
   bossGeneral: {fileID: 1361918166}
-  speedFactor: 1
-  constantSpeed: 0.1
-  lazerManagerHolder: {fileID: 321278469}
-  bulletManagerHolder: {fileID: 0}
-  aimerManagerHolder: {fileID: 0}
-  spikeEnemyManagerHolder: {fileID: 0}
 --- !u!114 &1361918166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5296,3 +5402,5 @@ SceneRoots:
   - {fileID: 2080484801}
   - {fileID: 1361918167}
   - {fileID: 1942335522}
+  - {fileID: 584107855}
+  - {fileID: 340589985}
