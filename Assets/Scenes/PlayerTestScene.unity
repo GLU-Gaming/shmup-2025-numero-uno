@@ -2604,7 +2604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1728076383}
   totalBatches: 1
-  spawn: {x: 0, y: 0, z: 0}
+  spawn: {x: -16, y: 6, z: 0}
 --- !u!4 &1055992538
 Transform:
   m_ObjectHideFlags: 0
@@ -2863,7 +2863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 605726719}
   totalBatches: 1
-  spawn: {x: 0, y: 0, z: 0}
+  spawn: {x: 16, y: 0, z: 0}
 --- !u!4 &1180616801
 Transform:
   m_ObjectHideFlags: 0
@@ -4986,7 +4986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 554932986}
   totalBatches: 1
-  spawn: {x: 0, y: 0, z: 0}
+  spawn: {x: -16, y: -6, z: 0}
 --- !u!4 &2080484801
 Transform:
   m_ObjectHideFlags: 0
