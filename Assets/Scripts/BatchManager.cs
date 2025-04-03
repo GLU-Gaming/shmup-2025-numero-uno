@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BatchManager : MonoBehaviour
@@ -9,6 +10,9 @@ public class BatchManager : MonoBehaviour
     [SerializeField] private int totalBatches;
 
     [SerializeField] private Vector3 spawn;
+
+    private float frameStartTime;
+
     void Start()
     {
         batches = new ulong[totalBatches];
@@ -65,8 +69,35 @@ public class BatchManager : MonoBehaviour
                     // Set bit to 0 (activate)
                     batches[i] &= ~(1UL << bitIndex);
                     objects[i][bitIndex].SetActive(true);
-                    objects[i][bitIndex].transform.position = position;
-                    objects[i][bitIndex].transform.rotation = rotation;
+                    objects[i][bitIndex].transform.SetPositionAndRotation(position, rotation);
+                    return objects[i][bitIndex];
+                }
+            }
+        }
+
+        Debug.LogError("ERROR: No Objects Available, Increase Batch Count For [" + prefab.name + "] In [" + gameObject.name + "]");
+
+        return null; // No available object
+    }
+
+    public GameObject Activate(Vector3 position, Quaternion rotation, float speedForOffset)
+    {
+        float dt = Time.realtimeSinceStartup;
+
+        for (int i = 0; i < totalBatches; i++)
+        {
+            if (batches[i] != 0) // Check if there's any inactive object
+            {
+                int bitIndex = FindFirstInactive(i);
+                if (bitIndex != -1)
+                {
+                    // Set bit to 0 (activate)
+                    batches[i] &= ~(1UL << bitIndex);
+                    objects[i][bitIndex].SetActive(true);
+
+                    dt = Time.realtimeSinceStartup - dt;
+
+                    objects[i][bitIndex].transform.SetPositionAndRotation(position + dt*(rotation * new Vector3(speedForOffset, 0, 0)), rotation);
                     return objects[i][bitIndex];
                 }
             }

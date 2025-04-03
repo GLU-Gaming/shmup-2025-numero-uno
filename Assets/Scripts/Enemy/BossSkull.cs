@@ -95,16 +95,22 @@ public class BossSkull : MonoBehaviour
 
             tornadoAngle += tornadoAngleIncrement;
 
-            float timeSinceLast = Time.time - lastTornadoSpawnTime;
-
+            float timeSinceLast = Time.realtimeSinceStartup - lastTornadoSpawnTime;
             positionOffset = bulletSpeed * (timeSinceLast - fixedDeltaTime);
 
-            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle) * new Vector3(positionOffset, 0, 0), Quaternion.Euler(0, 0, tornadoAngle));
-            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle + 90) * new Vector3(positionOffset, 0, 0), Quaternion.Euler(0, 0, tornadoAngle + 90));
-            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle + 180) * new Vector3(positionOffset, 0, 0), Quaternion.Euler(0, 0, tornadoAngle + 180));
-            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle + 270) * new Vector3(positionOffset, 0, 0), Quaternion.Euler(0, 0, tornadoAngle + 270));
+            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle) * new Vector3(positionOffset, 0, 0), 
+                Quaternion.Euler(0, 0, tornadoAngle), bulletSpeed);
 
-            lastTornadoSpawnTime = Time.time;
+            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle + 90) * new Vector3(positionOffset, 0, 0), 
+                Quaternion.Euler(0, 0, tornadoAngle + 90), bulletSpeed);
+
+            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle + 180) * new Vector3(positionOffset, 0, 0), 
+                Quaternion.Euler(0, 0, tornadoAngle + 180), bulletSpeed);
+
+            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle + 270) * new Vector3(positionOffset, 0, 0), 
+                Quaternion.Euler(0, 0, tornadoAngle + 270), bulletSpeed);
+
+            lastTornadoSpawnTime = Time.realtimeSinceStartup;
 
             // move lazers
         } else

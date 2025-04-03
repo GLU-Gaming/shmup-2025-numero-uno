@@ -3114,8 +3114,8 @@ MonoBehaviour:
   constantSpeed: 0.1
   lazerManagerHolder: {fileID: 321278469}
   bulletManagerHolder: {fileID: 2088214803}
-  aimerManagerHolder: {fileID: 0}
-  spikeEnemyManagerHolder: {fileID: 0}
+  aimerManagerHolder: {fileID: 2088214803}
+  spikeEnemyManagerHolder: {fileID: 1055992536}
   tornadoAngleIncrement: 7
   bulletSpeed: 10
   fixedDeltaTime: 0.02
