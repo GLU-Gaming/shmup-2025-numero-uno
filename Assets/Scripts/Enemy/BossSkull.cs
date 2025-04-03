@@ -38,6 +38,15 @@ public class BossSkull : MonoBehaviour
     private GameObject lazer1 = null;
     private GameObject lazer2 = null;
 
+    [SerializeField] float tornadoAngleIncrement;
+    private float tornadoAngle;
+
+    [SerializeField] float bulletSpeed;
+
+    private float lastTornadoSpawnTime = 0f;
+
+    [SerializeField] float fixedDeltaTime;
+
     private void Start()
     {
         lazerManager = lazerManagerHolder.GetComponent<BatchManager>();
@@ -69,8 +78,8 @@ public class BossSkull : MonoBehaviour
             ChangePhase();
         }
     }
-
-    private void Update()
+    public float positionOffset;
+    private void FixedUpdate()
     {
         phaseTimer -= Time.deltaTime;
 
@@ -84,7 +93,24 @@ public class BossSkull : MonoBehaviour
         {
             targetPos = new Vector3(8.5f, 0f, 0f);
 
-            // bullet tornado
+            tornadoAngle += tornadoAngleIncrement;
+
+            float timeSinceLast = Time.realtimeSinceStartup - lastTornadoSpawnTime;
+            positionOffset = bulletSpeed * (timeSinceLast - fixedDeltaTime);
+
+            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle) * new Vector3(positionOffset, 0, 0), 
+                Quaternion.Euler(0, 0, tornadoAngle), bulletSpeed);
+
+            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle + 90) * new Vector3(positionOffset, 0, 0), 
+                Quaternion.Euler(0, 0, tornadoAngle + 90), bulletSpeed);
+
+            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle + 180) * new Vector3(positionOffset, 0, 0), 
+                Quaternion.Euler(0, 0, tornadoAngle + 180), bulletSpeed);
+
+            bulletManager.Activate(transform.position + Quaternion.Euler(0, 0, tornadoAngle + 270) * new Vector3(positionOffset, 0, 0), 
+                Quaternion.Euler(0, 0, tornadoAngle + 270), bulletSpeed);
+
+            lastTornadoSpawnTime = Time.realtimeSinceStartup;
 
             // move lazers
         } else
@@ -105,6 +131,9 @@ public class BossSkull : MonoBehaviour
     {
         lazer1 = lazerManager.Activate(new Vector3(0f, 8f, 0f), Quaternion.Euler(Vector3.zero));
         lazer2 = lazerManager.Activate(new Vector3(0f, -8f, 0f), Quaternion.Euler(Vector3.zero));
+
+        tornadoAngle = 0;
+        lastTornadoSpawnTime = Time.time;
     }
 
     private void ChangePhase()
