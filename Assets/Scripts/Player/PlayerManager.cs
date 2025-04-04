@@ -31,6 +31,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] float haloWobbleAmplitude;
 
     [SerializeField] GameObject halo;
+    [SerializeField] GameObject shieldObj;
 
     private bool shield = true;
 
@@ -91,6 +92,8 @@ public class PlayerManager : MonoBehaviour
         }
 
         if (!Input.GetKey(KeyCode.LeftShift)) shield = true;
+
+        shieldObj.SetActive(shield && Input.GetKey(KeyCode.LeftShift));
     }
 
     private void OnTriggerEnter(Collider other)
