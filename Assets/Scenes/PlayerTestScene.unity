@@ -1041,8 +1041,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  normalSpeed: 15
-  startSpeed: 10
+  normalSpeed: 10
+  startSpeed: 15
   slowSpeed: 0
   timeUntilTurn: 1
   target: {fileID: 730108086}
