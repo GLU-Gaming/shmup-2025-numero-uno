@@ -47,6 +47,16 @@ public class BossSkull : MonoBehaviour
 
     [SerializeField] float fixedDeltaTime;
 
+    [SerializeField] float normalShootRate;
+
+    [SerializeField] Transform player;
+
+    private float shootTimer1;
+    private float shootTimer2;
+
+    [SerializeField] float normalShootAngle;
+    [SerializeField] int normalShootCount;
+
     private void Start()
     {
         lazerManager = lazerManagerHolder.GetComponent<BatchManager>();
@@ -120,7 +130,22 @@ public class BossSkull : MonoBehaviour
 
             } else
             {
+                shootTimer1 += Time.deltaTime;
 
+                if (shootTimer1 > normalShootRate)
+                {
+                    shootTimer1 -= normalShootRate;
+
+                    for (int i = 0; i < normalShootCount; i++)
+                    {
+                        float angle = Mathf.Lerp(180 - normalShootAngle/2, 180 + normalShootAngle/2, (float)i /(normalShootCount-1));
+
+                        bulletManager.Activate(transform.position, Quaternion.Euler(0, 0, angle));
+                        aimerManager.Activate(transform.position, Quaternion.Euler(0, 0, angle));
+                    }
+
+                    targetPos = new Vector3(8.5f, player.position.y, 0);
+                }
             }
         }
 
@@ -139,6 +164,9 @@ public class BossSkull : MonoBehaviour
     private void ChangePhase()
     {
         bossGeneral.invincible = !bossGeneral.invincible;
+
+        shootTimer1 = 0;
+        shootTimer2 = 0;
 
         if (bossGeneral.invincible)
         {

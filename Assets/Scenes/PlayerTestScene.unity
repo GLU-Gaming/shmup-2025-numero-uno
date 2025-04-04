@@ -3221,8 +3221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackMaterial: {fileID: 2100000, guid: 1e76079ea3f0d154589a47aa63f36fca, type: 2}
   whiteMaterial: {fileID: 2100000, guid: 6c64a6e4db4162c41a92a0a040141367, type: 2}
-  normalTime: 0
-  invincableTime: 10
+  normalTime: 30
+  invincableTime: 0
   bossGeneral: {fileID: 1361918166}
   speedFactor: 1
   constantSpeed: 0.2
@@ -3233,6 +3233,10 @@ MonoBehaviour:
   tornadoAngleIncrement: 7
   bulletSpeed: 10
   fixedDeltaTime: 0.02
+  normalShootRate: 1
+  player: {fileID: 730108086}
+  normalShootAngle: 45
+  normalShootCount: 7
   positionOffset: 0
 --- !u!114 &1361918166
 MonoBehaviour:
