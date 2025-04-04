@@ -98,7 +98,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyProjectile"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyProjectile") || other.gameObject.CompareTag("EnemyLazer"))
         {
             OnHit(other);
 
@@ -113,6 +113,25 @@ public class PlayerManager : MonoBehaviour
     {
         if (!invincible)
         {
+            if (other.gameObject.CompareTag("EnemyLazer"))
+            {
+                if (playerHealth <= 0)
+                {
+                    SceneManager.LoadScene("LoseScreen");
+                }
+                else
+                {
+                    playerHealth -= 1;
+                    healthScript.healthtest();
+                    PlayerHealthTXT.text = "HP:" + playerHealth;
+                }
+
+                transform.position = spawnPos;
+
+                invincible = true;
+                invincibilityTimer = invincibilityTime;
+            }
+
             if (shield && Input.GetKey(KeyCode.LeftShift))
             {
                 shield = false;
