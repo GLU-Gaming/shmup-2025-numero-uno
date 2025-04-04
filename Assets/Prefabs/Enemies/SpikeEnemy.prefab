@@ -109,7 +109,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   bulletManagerHolder: {fileID: 0}
   speed: 6
-  spinSpeed: 5
+  spinSpeed: 8
   startDirection: {x: 1, y: 0, z: 0}
   endDirection: {x: -0.87, y: -0.5, z: 0}
   timeTurnStart: 2.5

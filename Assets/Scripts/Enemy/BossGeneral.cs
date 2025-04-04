@@ -34,5 +34,7 @@ public class BossGeneral : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+
+
     }
 }
