@@ -2501,6 +2501,7 @@ MonoBehaviour:
   haloWobbleAmplitude: 15
   halo: {fileID: 1960961730}
   shieldObj: {fileID: 2074961318}
+  shieldCooldown: 0.5
 --- !u!135 &730108090
 SphereCollider:
   m_ObjectHideFlags: 0

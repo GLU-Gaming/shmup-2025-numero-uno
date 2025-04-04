@@ -35,6 +35,9 @@ public class PlayerManager : MonoBehaviour
 
     private bool shield = true;
 
+    [SerializeField] float shieldCooldown;
+    private float shieldTimer;
+
     private void Start()
     {
         PlayerHealthTXT.text = "HP:" + playerHealth;
@@ -91,7 +94,14 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
-        if (!Input.GetKey(KeyCode.LeftShift)) shield = true;
+        if (!Input.GetKey(KeyCode.LeftShift) && !shield) 
+        {
+            shieldTimer -= Time.deltaTime;
+            if (shieldTimer < 0)
+            {
+                shield = true;
+            }
+        }
 
         shieldObj.SetActive(shield && Input.GetKey(KeyCode.LeftShift));
     }
@@ -135,6 +145,8 @@ public class PlayerManager : MonoBehaviour
             if (shield && Input.GetKey(KeyCode.LeftShift))
             {
                 shield = false;
+
+                shieldTimer = shieldCooldown;
 
                 other.gameObject.GetComponent<BatchChild>().Deactivate();
             } else
