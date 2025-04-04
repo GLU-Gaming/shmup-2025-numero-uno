@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-using Unity.Mathematics;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -16,7 +15,6 @@ public class PlayerManager : MonoBehaviour
     public float shootTimer = 0;
     public int Highscore = 0;
     public int OLDHighscore = 0;
-    public HealthScript healthScript;
 
     [SerializeField] Vector3 spawnPos;
 
@@ -24,13 +22,6 @@ public class PlayerManager : MonoBehaviour
     
     private float invincibilityTimer;
     private bool invincible = true;
-
-    [SerializeField] float haloWobbleSpeed;
-    private float haloWobbleTimer;
-
-    [SerializeField] float haloWobbleAmplitude;
-
-    [SerializeField] GameObject halo;
 
     private void Start()
     {
@@ -42,17 +33,11 @@ public class PlayerManager : MonoBehaviour
         invincibilityTimer = invincibilityTime;
 
         bulletManager = bulletManagerHolder.GetComponent<BatchManager>();
-
-        haloWobbleTimer = 0;
     }
 
     private void Update()
     {
-        haloWobbleTimer += haloWobbleSpeed * Time.deltaTime;
-
-        halo.transform.rotation = Quaternion.Euler(90 + haloWobbleAmplitude * math.sin(haloWobbleTimer), -90 + haloWobbleAmplitude * math.cos(haloWobbleTimer), 0);
-
-        if (shootTimer > 0.15)
+        if (shootTimer > 0.2)
         {
             canshoot = true;
             shootTimer = 0;
@@ -113,7 +98,6 @@ public class PlayerManager : MonoBehaviour
             else
             {
                 playerHealth -= 1;
-                healthScript.healthtest();
                 PlayerHealthTXT.text = "HP:" + playerHealth;
             }
 
