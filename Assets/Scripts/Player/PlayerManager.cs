@@ -140,16 +140,15 @@ public class PlayerManager : MonoBehaviour
 
                 invincible = true;
                 invincibilityTimer = invincibilityTime;
-            }
-
-            if (shield && Input.GetKey(KeyCode.LeftShift))
+            } else if (shield && Input.GetKey(KeyCode.LeftShift))
             {
                 shield = false;
 
                 shieldTimer = shieldCooldown;
 
                 other.gameObject.GetComponent<BatchChild>().Deactivate();
-            } else
+            }
+            else
             {
                 if (playerHealth <= 0)
                 {
