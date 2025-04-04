@@ -38,13 +38,11 @@ public class EnemyBomber : EnemyBehaviourBase
 
         while (shootTimer > shootCooldown)
         {
+            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 205));
             bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 215));
-            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 225));
-            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 235));
 
+            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 155));
             bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 145));
-            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 135));
-            bulletManager.Activate(transform.position, transform.rotation * Quaternion.Euler(0, 0, 125));
 
             shootTimer -= shootCooldown;
         }

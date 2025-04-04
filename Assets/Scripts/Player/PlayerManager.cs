@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.Mathematics;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerManager : MonoBehaviour
     public float shootTimer = 0;
     public int Highscore = 0;
     public int OLDHighscore = 0;
+    public HealthScript healthScript;
 
     [SerializeField] Vector3 spawnPos;
 
@@ -22,6 +24,15 @@ public class PlayerManager : MonoBehaviour
     
     private float invincibilityTimer;
     private bool invincible = true;
+
+    [SerializeField] float haloWobbleSpeed;
+    private float haloWobbleTimer;
+
+    [SerializeField] float haloWobbleAmplitude;
+
+    [SerializeField] GameObject halo;
+
+    private bool shield = true;
 
     private void Start()
     {
@@ -33,11 +44,17 @@ public class PlayerManager : MonoBehaviour
         invincibilityTimer = invincibilityTime;
 
         bulletManager = bulletManagerHolder.GetComponent<BatchManager>();
+
+        haloWobbleTimer = 0;
     }
 
     private void Update()
     {
-        if (shootTimer > 0.2)
+        haloWobbleTimer += haloWobbleSpeed * Time.deltaTime;
+
+        halo.transform.rotation = Quaternion.Euler(90 + haloWobbleAmplitude * math.sin(haloWobbleTimer), -90 + haloWobbleAmplitude * math.cos(haloWobbleTimer), 0);
+
+        if (shootTimer > 0.15)
         {
             canshoot = true;
             shootTimer = 0;
@@ -72,13 +89,15 @@ public class PlayerManager : MonoBehaviour
                 transform.GetChild(0).gameObject.SetActive(true);
             }
         }
+
+        if (!Input.GetKey(KeyCode.LeftShift)) shield = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyProjectile"))
         {
-            OnHit();
+            OnHit(other);
 
             if (other.gameObject.CompareTag("EnemyProjectile"))
             {
@@ -87,24 +106,33 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void OnHit()
+    public void OnHit(Collider other)
     {
         if (!invincible)
         {
-            if (playerHealth <= 0)
+            if (shield && Input.GetKey(KeyCode.LeftShift))
             {
-                SceneManager.LoadScene("LoseScreen");
-            } 
-            else
+                shield = false;
+
+                other.gameObject.GetComponent<BatchChild>().Deactivate();
+            } else
             {
-                playerHealth -= 1;
-                PlayerHealthTXT.text = "HP:" + playerHealth;
+                if (playerHealth <= 0)
+                {
+                    SceneManager.LoadScene("LoseScreen");
+                }
+                else
+                {
+                    playerHealth -= 1;
+                    healthScript.healthtest();
+                    PlayerHealthTXT.text = "HP:" + playerHealth;
+                }
+
+                transform.position = spawnPos;
+
+                invincible = true;
+                invincibilityTimer = invincibilityTime;
             }
-
-            transform.position = spawnPos;
-
-            invincible = true;
-            invincibilityTimer = invincibilityTime;
         }
     }
 

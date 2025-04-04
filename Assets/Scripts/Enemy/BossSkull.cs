@@ -48,6 +48,8 @@ public class BossSkull : MonoBehaviour
     [SerializeField] float fixedDeltaTime;
 
     [SerializeField] float normalShootRate;
+    [SerializeField] float altShootRate;
+    [SerializeField] float altEnemyRate;
 
     [SerializeField] Transform player;
 
@@ -55,7 +57,9 @@ public class BossSkull : MonoBehaviour
     private float shootTimer2;
 
     [SerializeField] float normalShootAngle;
+    [SerializeField] float altShootAngle;
     [SerializeField] int normalShootCount;
+    [SerializeField] int altShootCount;
 
     private void Start()
     {
@@ -127,7 +131,33 @@ public class BossSkull : MonoBehaviour
         {
             if (altNormal)
             {
+                shootTimer1 += Time.deltaTime;
 
+                if (shootTimer1 > altShootRate)
+                {
+                    shootTimer1 -= altShootRate;
+
+                    for (int i = 0; i < altShootCount; i++)
+                    {
+                        float angle = Mathf.Lerp(180 - altShootAngle / 2, 180 + altShootAngle / 2, (float)i / (altShootCount - 1));
+
+                        aimerManager.Activate(transform.position, Quaternion.Euler(0, 0, angle));
+                    }
+
+                    targetPos = new Vector3(8.5f, player.position.y, 0);
+                }
+
+                shootTimer2 += Time.deltaTime;
+
+                if (shootTimer2 > altEnemyRate)
+                {
+                    shootTimer2 -= altEnemyRate;
+
+                    for (int i = -8; i < 9; i += 2)
+                    {
+                        spikeEnemyManager.Activate(new Vector3(16.5f, i, 0), Quaternion.Euler(Vector3.zero));
+                    }
+                }
             } else
             {
                 shootTimer1 += Time.deltaTime;
