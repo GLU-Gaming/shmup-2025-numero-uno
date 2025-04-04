@@ -3352,8 +3352,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackMaterial: {fileID: 2100000, guid: 1e76079ea3f0d154589a47aa63f36fca, type: 2}
   whiteMaterial: {fileID: 2100000, guid: 6c64a6e4db4162c41a92a0a040141367, type: 2}
-  normalTime: 30
-  invincableTime: 0
+  normalTime: 20
+  invincableTime: 10
   bossGeneral: {fileID: 1361918166}
   speedFactor: 1
   constantSpeed: 0.2
