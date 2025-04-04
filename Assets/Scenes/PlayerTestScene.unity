@@ -3740,7 +3740,7 @@ MonoBehaviour:
   altShootAngle: 45
   normalShootCount: 7
   altShootCount: 5
-  lazerEnd: 2
+  lazerEnd: 3
   lazerStart: 8
   positionOffset: 0
 --- !u!114 &1361918166
