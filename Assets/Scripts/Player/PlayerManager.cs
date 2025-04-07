@@ -38,6 +38,16 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] float shieldCooldown;
     private float shieldTimer;
 
+    [SerializeField] GameObject lazerObj;
+
+    private bool lazer = true;
+
+    [SerializeField] float lazerCooldown;
+    private float lazerTimer;
+
+    private float lazerActiveTimer;
+    [SerializeField] float lazerActive;
+
     private void Start()
     {
         PlayerHealthTXT.text = "HP:" + playerHealth;
@@ -50,6 +60,9 @@ public class PlayerManager : MonoBehaviour
         bulletManager = bulletManagerHolder.GetComponent<BatchManager>();
 
         haloWobbleTimer = 0;
+
+        lazerTimer = 0;
+        lazerActiveTimer = 0;
     }
 
     private void Update()
@@ -104,6 +117,28 @@ public class PlayerManager : MonoBehaviour
         }
 
         shieldObj.SetActive(shield && Input.GetKey(KeyCode.LeftShift));
+
+        if (Input.GetKey(KeyCode.Z))
+        {
+            lazerTimer += Time.deltaTime;
+
+            if (lazerTimer > lazerCooldown)
+            {
+                lazer = true;
+            }
+        } else
+        {
+            lazerTimer = 0;
+
+            if (lazer)
+            {
+                lazerActiveTimer = lazerActive;
+                lazer = false;
+            }
+        }
+
+        lazerObj.SetActive(lazerActiveTimer > 0);
+        lazerActiveTimer -= Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
