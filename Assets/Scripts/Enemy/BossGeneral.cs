@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossGeneral : MonoBehaviour
 {
@@ -35,6 +36,6 @@ public class BossGeneral : MonoBehaviour
 
         gameObject.SetActive(false);
 
-
+        SceneManager.LoadScene("WinScreen");
     }
 }

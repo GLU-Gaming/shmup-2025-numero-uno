@@ -26,6 +26,8 @@ public class EnemySniper : EnemyBehaviourBase
 
     private float moveTimer;
 
+    [SerializeField] GameObject gun;
+
     public new void Start() // put permanent overrides here
     {
         base.Start();
@@ -47,15 +49,17 @@ public class EnemySniper : EnemyBehaviourBase
         shootTimer1 += Time.deltaTime;
         shootTimer2 += Time.deltaTime;
 
+        Vector3 direction = target.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
         while (shootTimer1 > shootCooldown1)
         {
-            Vector3 direction = target.position - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
             bulletManager1.Activate(transform.position, Quaternion.Euler(0, 0, angle));
 
             shootTimer1 -= shootCooldown1;
         }
+
+        gun.transform.rotation = Quaternion.Euler(0, 0, angle + 180);
 
         while (shootTimer2 > shootCooldown2)
         {
