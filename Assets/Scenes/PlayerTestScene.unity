@@ -915,6 +915,92 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225962832}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &241708705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1774663759}
+    m_Modifications:
+    - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 730108086}
+    - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: vSpeed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: bulletManager1Holder
+      value: 
+      objectReference: {fileID: 2088214803}
+    - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: bulletManager2Holder
+      value: 
+      objectReference: {fileID: 413429087}
+    - target: {fileID: 1836405040074294775, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_Name
+      value: SniperEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836405040074294775, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811320068834096687, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 730108082}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+--- !u!4 &241708706 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+  m_PrefabInstance: {fileID: 241708705}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &287898685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1333,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1774663759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &326425614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 326425615}
+  - component: {fileID: 326425617}
+  - component: {fileID: 326425616}
+  m_Layer: 0
+  m_Name: SniperEnemyHolder (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &326425615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326425614}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1774663759}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &326425616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326425614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebcdd4529bcbb94db3c753cebb91c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XYT: []
+--- !u!114 &326425617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326425614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8146fb37974c41b45b0ae6ec251d9b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  totalBatches: 1
+  spawn: {x: 0, y: 0, z: 0}
 --- !u!1 &338822389
 GameObject:
   m_ObjectHideFlags: 0
@@ -5145,6 +5292,8 @@ Transform:
   - {fileID: 922410846}
   - {fileID: 1285524735}
   - {fileID: 134097706}
+  - {fileID: 241708706}
+  - {fileID: 326425615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1813310259
