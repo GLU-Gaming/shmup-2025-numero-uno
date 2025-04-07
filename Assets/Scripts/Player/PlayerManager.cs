@@ -40,7 +40,7 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] GameObject lazerObj;
 
-    private bool lazer = true;
+    private bool lazer = false;
 
     [SerializeField] float lazerCooldown;
     private float lazerTimer;
