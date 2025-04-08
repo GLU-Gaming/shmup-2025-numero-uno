@@ -22,6 +22,8 @@ public class ObstacleFireball : EnemyBehaviourBase
     {
         rb.linearVelocity = new Vector3(horizontalSpeed, speed, 0f);
 
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(rb.linearVelocity.y, rb.linearVelocity.x) * Mathf.Rad2Deg + 270);
+
         speed -= acceleration * Time.deltaTime;
     }
 }

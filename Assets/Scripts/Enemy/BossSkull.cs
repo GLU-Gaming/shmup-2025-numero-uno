@@ -64,6 +64,8 @@ public class BossSkull : MonoBehaviour
     [SerializeField] float lazerEnd;
     [SerializeField] float lazerStart;
 
+    [SerializeField] float randomOffset;
+
     private void Start()
     {
         lazerManager = lazerManagerHolder.GetComponent<BatchManager>();
@@ -148,7 +150,7 @@ public class BossSkull : MonoBehaviour
                         aimerManager.Activate(transform.position, Quaternion.Euler(0, 0, angle));
                     }
 
-                    targetPos = new Vector3(8.5f, player.position.y, 0);
+                    targetPos = new Vector3(8.5f + Random.Range(0, randomOffset) - Random.Range(0, randomOffset), player.position.y, 0);
                 }
 
                 shootTimer2 += Time.deltaTime;
@@ -178,7 +180,7 @@ public class BossSkull : MonoBehaviour
                         aimerManager.Activate(transform.position, Quaternion.Euler(0, 0, angle));
                     }
 
-                    targetPos = new Vector3(8.5f, player.position.y, 0);
+                    targetPos = new Vector3(8.5f + Random.Range(0, randomOffset) - Random.Range(0, randomOffset), player.position.y, 0);
                 }
             }
         }

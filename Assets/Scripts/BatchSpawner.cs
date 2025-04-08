@@ -22,6 +22,8 @@ public class BatchSpawner : MonoBehaviour
                 batchManager.Activate(new Vector3(XYT[index].x, XYT[index].y, 0), Quaternion.Euler(Vector3.zero));
 
                 index++;
+
+                if (index >= XYT.Length) break;
             }
         }
     }
