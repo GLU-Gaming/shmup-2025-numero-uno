@@ -2441,7 +2441,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ebcdd4529bcbb94db3c753cebb91c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XYT: []
+  XYT:
+  - {x: -15, y: -8, z: 20}
+  - {x: -14, y: -8, z: 20.5}
+  - {x: -13, y: -8, z: 21}
+  - {x: -12, y: -8, z: 21.5}
+  - {x: -11, y: -8, z: 22}
+  - {x: -10, y: -8, z: 22.5}
+  - {x: -9, y: -8, z: 23}
+  - {x: -8, y: -8, z: 23.5}
+  - {x: -7, y: -8, z: 24}
+  - {x: -6, y: -8, z: 24.5}
+  - {x: -5, y: -8, z: 25}
+  - {x: -4, y: -8, z: 25.5}
+  - {x: -3, y: -8, z: 26}
+  - {x: -2, y: -8, z: 26.5}
+  - {x: -1, y: -8, z: 27}
+  - {x: 0, y: -8, z: 27.5}
+  - {x: 1, y: -8, z: 28}
+  - {x: 2, y: -8, z: 28.5}
+  - {x: 3, y: -8, z: 29}
+  - {x: 4, y: -8, z: 29.5}
+  - {x: 5, y: -8, z: 30}
+  - {x: 6, y: -8, z: 30.5}
+  - {x: 7, y: -8, z: 31}
+  - {x: 8, y: -8, z: 31.5}
+  - {x: 9, y: -8, z: 32}
+  - {x: 10, y: -8, z: 32.5}
+  - {x: 11, y: -8, z: 33}
+  - {x: 12, y: -8, z: 33.5}
+  - {x: 13, y: -8, z: 34}
+  - {x: 14, y: -8, z: 34.5}
+  - {x: 15, y: -8, z: 35}
 --- !u!114 &632186991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3670,6 +3701,16 @@ MonoBehaviour:
   - {x: -16.5, y: 6, z: 4.8}
   - {x: -16.5, y: 6, z: 5.2}
   - {x: -16.5, y: 6, z: 5.6}
+  - {x: -16.5, y: 6, z: 36}
+  - {x: -16.5, y: 6, z: 37}
+  - {x: -16.5, y: 6, z: 38}
+  - {x: -16.5, y: 6, z: 39}
+  - {x: -16.5, y: 6, z: 40}
+  - {x: -16.5, y: 6, z: 41}
+  - {x: -16.5, y: 6, z: 42}
+  - {x: -16.5, y: 6, z: 43}
+  - {x: -16.5, y: 6, z: 44}
+  - {x: -16.5, y: 6, z: 45}
 --- !u!1 &1058350360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6320,6 +6361,16 @@ MonoBehaviour:
   - {x: -16.5, y: -6, z: 6.8}
   - {x: -16.5, y: -6, z: 7.2}
   - {x: -16.5, y: -6, z: 7.6}
+  - {x: -16.5, y: -6, z: 36.5}
+  - {x: -16.5, y: -6, z: 37.5}
+  - {x: -16.5, y: -6, z: 38.5}
+  - {x: -16.5, y: -6, z: 39.5}
+  - {x: -16.5, y: -6, z: 40.5}
+  - {x: -16.5, y: -6, z: 41.5}
+  - {x: -16.5, y: -6, z: 42.5}
+  - {x: -16.5, y: -6, z: 43.5}
+  - {x: -16.5, y: -6, z: 44.5}
+  - {x: -16.5, y: -6, z: 45.5}
 --- !u!1 &2088214803
 GameObject:
   m_ObjectHideFlags: 0
@@ -6735,6 +6786,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7289240913579609528, guid: 2b6fa08b4f2b20945a6d516813d38262, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 730108082}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
