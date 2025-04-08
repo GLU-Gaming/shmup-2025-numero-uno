@@ -78,16 +78,14 @@ public class PlayerManager : MonoBehaviour
         }
 
 
-        if (canshoot == true)
+        if (canshoot)
         {
             if (Input.GetKey(KeyCode.Z))
             {
                 bulletManager.Activate(transform.position, transform.rotation);
                 canshoot = false;
             }
-        }
-
-        if (canshoot == false)
+        } else 
         {
             shootTimer += Time.deltaTime;
         }
@@ -143,7 +141,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyProjectile") || other.gameObject.CompareTag("EnemyLazer"))
+        if (!other.gameObject.CompareTag("PlayBullet") && (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyProjectile") || other.gameObject.CompareTag("EnemyLazer")))
         {
             OnHit(other);
 
