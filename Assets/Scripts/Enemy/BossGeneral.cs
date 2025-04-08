@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossGeneral : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
-    private int health = 0;
+    [SerializeField] public int maxHealth;
+    public int health = 0;
 
     public bool invincible = false;
 
@@ -34,5 +35,7 @@ public class BossGeneral : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+
+        SceneManager.LoadScene("WinScreen");
     }
 }

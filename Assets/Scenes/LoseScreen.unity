@@ -673,7 +673,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1484508858}
+      - m_Target: {fileID: 1461908353}
         m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
@@ -1012,6 +1012,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d637bd60bf8fd934890e06e3dda42fbb, type: 3}
+--- !u!114 &1461908353 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4498435360669629734, guid: 8932cd03028936047ae77e031c77e91c, type: 3}
+  m_PrefabInstance: {fileID: 1484508857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981f106e2f92f6745ae33168a561edb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1484508857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1069,17 +1080,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8932cd03028936047ae77e031c77e91c, type: 3}
---- !u!114 &1484508858 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4265796948438193128, guid: 8932cd03028936047ae77e031c77e91c, type: 3}
-  m_PrefabInstance: {fileID: 1484508857}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 981f106e2f92f6745ae33168a561edb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2090002481
 GameObject:
   m_ObjectHideFlags: 0

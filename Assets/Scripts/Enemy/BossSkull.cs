@@ -61,6 +61,9 @@ public class BossSkull : MonoBehaviour
     [SerializeField] int normalShootCount;
     [SerializeField] int altShootCount;
 
+    [SerializeField] float lazerEnd;
+    [SerializeField] float lazerStart;
+
     private void Start()
     {
         lazerManager = lazerManagerHolder.GetComponent<BatchManager>();
@@ -102,7 +105,6 @@ public class BossSkull : MonoBehaviour
             ChangePhase();
         }
 
-        // movement and shit
         if (bossGeneral.invincible)
         {
             targetPos = new Vector3(8.5f, 0f, 0f);
@@ -127,6 +129,8 @@ public class BossSkull : MonoBehaviour
             lastTornadoSpawnTime = Time.realtimeSinceStartup;
 
             // move lazers
+            lazer1.transform.position = new Vector3(0, Mathf.Lerp(lazerEnd, lazerStart, phaseTimer/invincableTime), 0);
+            lazer2.transform.position = new Vector3(0, -Mathf.Lerp(lazerEnd, lazerStart, phaseTimer/invincableTime), 0);
         } else
         {
             if (altNormal)
@@ -184,8 +188,8 @@ public class BossSkull : MonoBehaviour
 
     private void InvincibleStart()
     {
-        lazer1 = lazerManager.Activate(new Vector3(0f, 8f, 0f), Quaternion.Euler(Vector3.zero));
-        lazer2 = lazerManager.Activate(new Vector3(0f, -8f, 0f), Quaternion.Euler(Vector3.zero));
+        lazer1 = lazerManager.Activate();
+        lazer2 = lazerManager.Activate();
 
         tornadoAngle = 0;
         lastTornadoSpawnTime = Time.time;

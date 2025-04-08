@@ -11,6 +11,7 @@ TagManager:
   - EnemyProjectile
   - Background
   - EnemyBoss
+  - EnemyLazer
   layers:
   - Default
   - TransparentFX

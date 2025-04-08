@@ -31,8 +31,22 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] float haloWobbleAmplitude;
 
     [SerializeField] GameObject halo;
+    [SerializeField] GameObject shieldObj;
 
     private bool shield = true;
+
+    [SerializeField] float shieldCooldown;
+    private float shieldTimer;
+
+    [SerializeField] GameObject lazerObj;
+
+    private bool lazer = false;
+
+    [SerializeField] float lazerCooldown;
+    private float lazerTimer;
+
+    private float lazerActiveTimer;
+    [SerializeField] float lazerActive;
 
     private void Start()
     {
@@ -46,6 +60,9 @@ public class PlayerManager : MonoBehaviour
         bulletManager = bulletManagerHolder.GetComponent<BatchManager>();
 
         haloWobbleTimer = 0;
+
+        lazerTimer = 0;
+        lazerActiveTimer = 0;
     }
 
     private void Update()
@@ -90,12 +107,43 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
-        if (!Input.GetKey(KeyCode.LeftShift)) shield = true;
+        if (!Input.GetKey(KeyCode.LeftShift) && !shield) 
+        {
+            shieldTimer -= Time.deltaTime;
+            if (shieldTimer < 0)
+            {
+                shield = true;
+            }
+        }
+
+        shieldObj.SetActive(shield && Input.GetKey(KeyCode.LeftShift));
+
+        if (Input.GetKey(KeyCode.Z))
+        {
+            lazerTimer += Time.deltaTime;
+
+            if (lazerTimer > lazerCooldown)
+            {
+                lazer = true;
+            }
+        } else
+        {
+            lazerTimer = 0;
+
+            if (lazer)
+            {
+                lazerActiveTimer = lazerActive;
+                lazer = false;
+            }
+        }
+
+        lazerObj.SetActive(lazerActiveTimer > 0);
+        lazerActiveTimer -= Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyProjectile"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyProjectile") || other.gameObject.CompareTag("EnemyLazer"))
         {
             OnHit(other);
 
@@ -110,12 +158,32 @@ public class PlayerManager : MonoBehaviour
     {
         if (!invincible)
         {
-            if (shield && Input.GetKey(KeyCode.LeftShift))
+            if (other.gameObject.CompareTag("EnemyLazer"))
+            {
+                if (playerHealth <= 0)
+                {
+                    SceneManager.LoadScene("LoseScreen");
+                }
+                else
+                {
+                    playerHealth -= 1;
+                    healthScript.healthtest();
+                    PlayerHealthTXT.text = "HP:" + playerHealth;
+                }
+
+                transform.position = spawnPos;
+
+                invincible = true;
+                invincibilityTimer = invincibilityTime;
+            } else if (shield && Input.GetKey(KeyCode.LeftShift))
             {
                 shield = false;
 
+                shieldTimer = shieldCooldown;
+
                 other.gameObject.GetComponent<BatchChild>().Deactivate();
-            } else
+            }
+            else
             {
                 if (playerHealth <= 0)
                 {
