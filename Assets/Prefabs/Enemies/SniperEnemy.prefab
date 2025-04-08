@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4630713824448614041}
   m_Layer: 0
   m_Name: SniperEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   shootCooldown1: 1
   bulletManager2Holder: {fileID: 0}
   shootCooldown2: 1.5
-  offset: 1
+  offset: 0.5
   hSpeed: 2
   vSpeed: 1
   target: {fileID: 0}

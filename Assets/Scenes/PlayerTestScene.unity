@@ -619,7 +619,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ebcdd4529bcbb94db3c753cebb91c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XYT: []
+  XYT:
+  - {x: 16.5, y: 3.75, z: 0}
+  - {x: 16.5, y: 2.25, z: 0.2}
+  - {x: 16.5, y: 0.75, z: 0.4}
 --- !u!114 &134097708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,12 +927,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1774663759}
     m_Modifications:
     - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: hSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 730108086}
     - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
       propertyPath: vSpeed
-      value: -1
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
       propertyPath: bulletManager1Holder
@@ -1378,7 +1385,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ebcdd4529bcbb94db3c753cebb91c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XYT: []
+  XYT:
+  - {x: 16.5, y: -3.75, z: 0}
+  - {x: 16.5, y: -2.25, z: 0.2}
+  - {x: 16.5, y: -0.75, z: 0.4}
 --- !u!114 &326425617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6497,9 +6507,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1774663759}
     m_Modifications:
     - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: hSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 730108086}
+    - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: vSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 299762958109923653, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
       propertyPath: bulletManager1Holder
       value: 
@@ -6555,6 +6573,10 @@ PrefabInstance:
     - target: {fileID: 2128849177058665370, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500768369847048943, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8811320068834096687, guid: 4daa0c980ce93dd4c9654802b814c432, type: 3}
       propertyPath: player
