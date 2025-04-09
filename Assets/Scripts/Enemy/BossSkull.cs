@@ -85,7 +85,7 @@ public class BossSkull : MonoBehaviour
 
     private void Update()
     {
-        MOUTH.transform.localPosition = new Vector3(0, (Mathf.Sin(Time.time * mouthMovement) - 1), 0);
+        // MOUTH.transform.localPosition = new Vector3(0, 6 + (Mathf.Sin(Time.time * mouthMovement) - 1), 0);
     }
 
     private void OnEnable()
