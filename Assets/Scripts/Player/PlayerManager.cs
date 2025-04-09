@@ -20,6 +20,9 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] Vector3 spawnPos;
 
+
+    [SerializeField] private AudioClip  ShootSFX;
+
     [SerializeField] float invincibilityTime;
     
     private float invincibilityTimer;
@@ -27,6 +30,9 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] float haloWobbleSpeed;
     private float haloWobbleTimer;
+
+    private AudioSource audioSource;
+
 
     [SerializeField] float haloWobbleAmplitude;
 
@@ -63,6 +69,8 @@ public class PlayerManager : MonoBehaviour
 
         lazerTimer = 0;
         lazerActiveTimer = 0;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -83,6 +91,8 @@ public class PlayerManager : MonoBehaviour
             if (Input.GetKey(KeyCode.Z))
             {
                 bulletManager.Activate(transform.position, transform.rotation);
+                audioSource.clip = ShootSFX;
+                audioSource.Play();
                 canshoot = false;
             }
         } else 
