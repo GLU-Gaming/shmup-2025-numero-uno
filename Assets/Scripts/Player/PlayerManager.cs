@@ -48,6 +48,8 @@ public class PlayerManager : MonoBehaviour
     private float lazerActiveTimer;
     [SerializeField] float lazerActive;
 
+    [SerializeField] GameObject lazerIndicator;
+
     private void Start()
     {
         PlayerHealthTXT.text = "HP:" + playerHealth;
@@ -134,6 +136,8 @@ public class PlayerManager : MonoBehaviour
                 lazer = false;
             }
         }
+
+        lazerIndicator.SetActive(lazer);
 
         lazerObj.SetActive(lazerActiveTimer > 0);
         lazerActiveTimer -= Time.deltaTime;
