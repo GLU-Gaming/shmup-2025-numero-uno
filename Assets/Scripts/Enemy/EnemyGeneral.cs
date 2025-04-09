@@ -36,9 +36,4 @@ public class EnemyGeneral : MonoBehaviour
         enemyBehaviour.OnDeath();
         GetComponent<BatchChild>().Deactivate();
     }
-
-    void OnMouseDown()
-    {
-        Death();
-    }
 }
