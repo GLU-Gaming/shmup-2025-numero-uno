@@ -3381,7 +3381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 148334323982344668, guid: cda3ed0f854a69249b0f5ae6dc9e9dcd, type: 3}
-  totalBatches: 5
+  totalBatches: 6
   spawn: {x: 0, y: 0, z: 0}
 --- !u!1 &1062130409
 GameObject:
