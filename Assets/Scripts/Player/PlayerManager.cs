@@ -22,6 +22,7 @@ public class PlayerManager : MonoBehaviour
 
 
     [SerializeField] private AudioClip  ShootSFX;
+    [SerializeField] private AudioClip hitSFX;
 
     [SerializeField] float invincibilityTime;
     
@@ -178,6 +179,8 @@ public class PlayerManager : MonoBehaviour
                 }
                 else
                 {
+                    audioSource.clip = hitSFX;
+                    audioSource.Play();
                     playerHealth -= 1;
                     healthScript.healthtest();
                     PlayerHealthTXT.text = "HP:" + playerHealth;
