@@ -93,9 +93,9 @@ public class PlayerManager : MonoBehaviour
             if (Input.GetKey(KeyCode.Z))
             {
                 bulletManager.Activate(transform.position, transform.rotation);
+                canshoot = false;
                 audioSource.clip = ShootSFX;
                 audioSource.Play();
-                canshoot = false;
             }
         } else 
         {
