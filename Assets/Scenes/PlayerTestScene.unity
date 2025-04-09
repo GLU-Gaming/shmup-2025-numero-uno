@@ -8637,6 +8637,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1499246174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1209121118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 431893622415856698, guid: cf3d1124c69d2ae4385cd66a4f1dfd0a, type: 3}
+  m_PrefabInstance: {fileID: 270057497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1242696146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8923,6 +8928,7 @@ MonoBehaviour:
   randomOffset: 1
   mouthMovement: 1
   MOUTH: {fileID: 270057499}
+  TEETH: {fileID: 1209121118}
   positionOffset: 0
 --- !u!114 &1361918166
 MonoBehaviour:

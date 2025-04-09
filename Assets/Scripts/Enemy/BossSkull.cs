@@ -68,6 +68,7 @@ public class BossSkull : MonoBehaviour
 
     [SerializeField] float mouthMovement;
     [SerializeField] GameObject MOUTH;
+    [SerializeField] GameObject TEETH;
 
     private void Start()
     {
@@ -85,7 +86,8 @@ public class BossSkull : MonoBehaviour
 
     private void Update()
     {
-        // MOUTH.transform.localPosition = new Vector3(0, 6 + (Mathf.Sin(Time.time * mouthMovement) - 1), 0);
+        MOUTH.transform.localPosition = new Vector3(-0.6382211f, 6.288777f + (Mathf.Sin(Time.time * mouthMovement) - 1), -0.002273731f);
+        TEETH.transform.localPosition = new Vector3(2.400391f, 6.86375f + (Mathf.Sin(Time.time * mouthMovement) - 1), 0.06094552f);
     }
 
     private void OnEnable()
