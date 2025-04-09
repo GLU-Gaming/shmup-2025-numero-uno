@@ -2632,7 +2632,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
@@ -9022,7 +9022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f24a734f7d469a48ada047652ae44d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 480
+  maxHealth: 320
   health: 0
   invincible: 0
 --- !u!4 &1361918167
