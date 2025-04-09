@@ -806,6 +806,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7694457017345721069, guid: cf3d1124c69d2ae4385cd66a4f1dfd0a, type: 3}
   m_PrefabInstance: {fileID: 270057497}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &270057499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3800166635230103505, guid: cf3d1124c69d2ae4385cd66a4f1dfd0a, type: 3}
+  m_PrefabInstance: {fileID: 270057497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &287898685
 GameObject:
   m_ObjectHideFlags: 0
@@ -8916,6 +8921,8 @@ MonoBehaviour:
   lazerEnd: 3
   lazerStart: 8
   randomOffset: 1
+  mouthMovement: 1
+  MOUTH: {fileID: 270057499}
   positionOffset: 0
 --- !u!114 &1361918166
 MonoBehaviour:
