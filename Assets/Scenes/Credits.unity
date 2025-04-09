@@ -629,14 +629,14 @@ MonoBehaviour:
     Broers\r\nGray Stempher\r\nJaylen Coll\xE9\r\nJasper Leejien\r\nTwan van Kemenade\r\nAngelos
     Nithvrianakis\r\n\r\n3D Artist:\r\nDaniel Broers\r\nJaylen Coll\xE9\r\nJasper
     Leejien\r\nAngelos Nithvrianakis\r\n\r\n2D Artist:\r\nGray Stempher\r\nTwan van
-    Kemenade\r\n\r\nConcept artist:\r\nGray Stempher\r\nJasper Leejin\r\nTwan van
-    Kemenade\r\nAngelos Nithvrianakis\r\n\r\nTexture artist:\r\nGray Stempher\r\nJasper
+    Kemenade\r\n\r\nConcept artist:\r\nGray Stempher\n\rJaylen Coll\xE9\nJasper Leejin\r\nTwan
+    van Kemenade\r\nAngelos Nithvrianakis\r\n\r\nTexture artist:\r\nGray Stempher\r\nJasper
     Leejin\r\nTwan van Kemenade\r\nAngelos Nithvrianakis\r\n\r\n3D Modeler:\r\nDaniel
     Broers\r\nGray Stempher\r\nJaylen Coll\xE9\r\nJasper Leejien\r\nTwan van Kemenade\r\nAngelos
     Nithvrianakis\r\n\r\nEnvironment Artist:\r\nJasper Leejien\r\nTwan van Kemenade\r\nAngelos
     Nithvrianakis\nDaniel Broers\r\n\r\nUI Artist:\r\nGray Stempher\r\nTwan van Kemenade\r\n\r\nUI
     Designer:\r\nJiminash van Duuren\r\n\r\nCoder:\r\nThunderstar\r\n\r\nAudio engineer:\r\nJiminash
-    van Duuren\n"
+    van Duuren\nTwan van Kemenade"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
