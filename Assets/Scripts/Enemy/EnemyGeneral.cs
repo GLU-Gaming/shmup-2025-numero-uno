@@ -15,6 +15,8 @@ public class EnemyGeneral : MonoBehaviour
         {
             GetComponent<BatchChild>().Deactivate();
         }
+
+        transform.rotation = Quaternion.Euler(0, 0, -enemyBehaviour.rb.linearVelocity.x);
     }
 
     private void OnEnable()
@@ -33,10 +35,5 @@ public class EnemyGeneral : MonoBehaviour
         player?.GetComponent<PlayerManager>().Kill();
         enemyBehaviour.OnDeath();
         GetComponent<BatchChild>().Deactivate();
-    }
-
-    void OnMouseDown()
-    {
-        Death();
     }
 }
