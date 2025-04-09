@@ -2577,6 +2577,7 @@ MonoBehaviour:
   healthScript: {fileID: 1062514307}
   spawnPos: {x: -7, y: 0, z: 0}
   ShootSFX: {fileID: 8300000, guid: 4b70d54b969b9a64ababe921af9112c7, type: 3}
+  hitSFX: {fileID: 8300000, guid: ab9f9b75c55db13449ae0faf4764b21a, type: 3}
   invincibilityTime: 1.5
   haloWobbleSpeed: 1
   haloWobbleAmplitude: 15
