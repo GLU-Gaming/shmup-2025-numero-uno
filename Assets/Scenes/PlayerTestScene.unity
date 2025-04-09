@@ -15158,7 +15158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 3497362366911278612, guid: e9e41751ce67ca540827ee0d32325ee3, type: 3}
-  totalBatches: 3
+  totalBatches: 5
   spawn: {x: 0, y: 0, z: 0}
 --- !u!4 &2088214805
 Transform:

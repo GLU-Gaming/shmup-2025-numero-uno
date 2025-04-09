@@ -211,6 +211,16 @@ public class BossSkull : MonoBehaviour
     {
         bossGeneral.invincible = !bossGeneral.invincible;
 
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            enemy.GetComponent<EnemyGeneral>().Death();
+        }
+
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("EnemyProjectile"))
+        {
+            enemy.GetComponent<BatchChild>().Deactivate();
+        }
+
         shootTimer1 = 0;
         shootTimer2 = 0;
 
