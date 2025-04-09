@@ -66,6 +66,10 @@ public class BossSkull : MonoBehaviour
 
     [SerializeField] float randomOffset;
 
+    [SerializeField] float mouthMovement;
+    [SerializeField] GameObject MOUTH;
+    [SerializeField] GameObject TEETH;
+
     private void Start()
     {
         lazerManager = lazerManagerHolder.GetComponent<BatchManager>();
@@ -78,6 +82,12 @@ public class BossSkull : MonoBehaviour
         {
             originalBackgroundColor = mainCamera.backgroundColor;
         }
+    }
+
+    private void Update()
+    {
+        MOUTH.transform.localPosition = new Vector3(-0.6382211f, 6.288777f + (Mathf.Sin(Time.time * mouthMovement) - 1), -0.002273731f);
+        TEETH.transform.localPosition = new Vector3(2.400391f, 6.86375f + (Mathf.Sin(Time.time * mouthMovement) - 1), 0.06094552f);
     }
 
     private void OnEnable()

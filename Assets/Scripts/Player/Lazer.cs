@@ -14,8 +14,6 @@ public class Lazer : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<EnemyGeneral>().Death();
-
-            GetComponent<BatchChild>().Deactivate();
         } else if (other.gameObject.CompareTag("EnemyBoss"))
         {
             for (int i = 0; i < 16; i++)
