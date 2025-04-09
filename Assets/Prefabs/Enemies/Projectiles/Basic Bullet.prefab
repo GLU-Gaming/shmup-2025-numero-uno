@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: long fast atk
       objectReference: {fileID: 0}
+    - target: {fileID: 1118801920512557686, guid: 3c5e0a7b580d6df41aa7c844031e6b8f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
