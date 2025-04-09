@@ -1460,6 +1460,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paaseitje-PR
       objectReference: {fileID: 0}
+    - target: {fileID: 4800345124791327487, guid: 63eb0b945d53fce4fa6ec4ae22c03dd7, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031446747784156618, guid: 63eb0b945d53fce4fa6ec4ae22c03dd7, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
     - target: {fileID: 5320317799456260165, guid: 63eb0b945d53fce4fa6ec4ae22c03dd7, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15000002
@@ -1830,6 +1838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bident
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8090b24268bed00449dbc083e89c3979, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1867,6 +1879,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a3db1a6d16d0c4749b788a2e2e09d597, type: 2}
+    - target: {fileID: 3986087500121237994, guid: 896e84f7cdcb64c418e7e9e850d4f294, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
     - target: {fileID: 7667350387487819892, guid: 896e84f7cdcb64c418e7e9e850d4f294, type: 3}
       propertyPath: thresholdX
       value: -200
@@ -1874,6 +1890,10 @@ PrefabInstance:
     - target: {fileID: 7716083172307580315, guid: 896e84f7cdcb64c418e7e9e850d4f294, type: 3}
       propertyPath: m_Name
       value: BGstuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 7716083172307580315, guid: 896e84f7cdcb64c418e7e9e850d4f294, type: 3}
+      propertyPath: m_TagString
+      value: Background
       objectReference: {fileID: 0}
     - target: {fileID: 7887588020866679914, guid: 896e84f7cdcb64c418e7e9e850d4f294, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2418,6 +2438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hangende Steen
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f6c3ccb01a3355447b24f318f46f535e, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2889,6 +2913,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 511492144}
     m_Modifications:
+    - target: {fileID: 142250115381177805, guid: 0712a7bf273516545a5a4b799a6f5f95, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087844328328003799, guid: 0712a7bf273516545a5a4b799a6f5f95, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321707696859384638, guid: 0712a7bf273516545a5a4b799a6f5f95, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729689428760080722, guid: 0712a7bf273516545a5a4b799a6f5f95, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
     - target: {fileID: 8268463816138951619, guid: 0712a7bf273516545a5a4b799a6f5f95, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.05272298
@@ -2944,6 +2984,10 @@ PrefabInstance:
     - target: {fileID: 8787838596730212729, guid: 0712a7bf273516545a5a4b799a6f5f95, type: 3}
       propertyPath: m_Name
       value: 'skull '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787838596730212729, guid: 0712a7bf273516545a5a4b799a6f5f95, type: 3}
+      propertyPath: m_TagString
+      value: Background
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3581,7 +3625,7 @@ GameObject:
   - component: {fileID: 1113416621}
   m_Layer: 0
   m_Name: Particle System
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8650,9 +8694,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2100126867}
     m_Modifications:
+    - target: {fileID: 2787571884743444434, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425635541797338049, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598770780429900231, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
     - target: {fileID: 3944146845870806770, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
       propertyPath: m_Name
       value: Bones ribs
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944146845870806770, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
+      propertyPath: m_TagString
+      value: Background
       objectReference: {fileID: 0}
     - target: {fileID: 4465244282280414280, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
       propertyPath: m_LocalScale.x
@@ -8705,6 +8765,26 @@ PrefabInstance:
     - target: {fileID: 4465244282280414280, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804064268758625203, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898305386743515335, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145343841685588016, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670489009517013574, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030675416292198236, guid: 7aa6481d5ba67c746a4066916d05d0d4, type: 3}
+      propertyPath: m_TagString
+      value: Background
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9372,6 +9452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flat powered by orb
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 249374a3b3328764fa904ffbc6a33768, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9390,7 +9474,7 @@ GameObject:
   - component: {fileID: 1588545774}
   m_Layer: 0
   m_Name: Particle System (1)
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14275,6 +14359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: crashed plane bg
       objectReference: {fileID: 0}
+    - target: {fileID: 889510506819048078, guid: 3edf85e8f5cbbc249b76bc1ebc2824f3, type: 3}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
     - target: {fileID: 1682324704897200987, guid: 3edf85e8f5cbbc249b76bc1ebc2824f3, type: 3}
       propertyPath: m_CastShadows
       value: 1
@@ -14532,6 +14620,10 @@ PrefabInstance:
     - target: {fileID: 5921747678344909748, guid: 0c1f7df06e3ae904698a972cc0716068, type: 3}
       propertyPath: m_Name
       value: Scythe rock-PR
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921747678344909748, guid: 0c1f7df06e3ae904698a972cc0716068, type: 3}
+      propertyPath: m_TagString
+      value: Background
       objectReference: {fileID: 0}
     - target: {fileID: 6441720383410161934, guid: 0c1f7df06e3ae904698a972cc0716068, type: 3}
       propertyPath: m_LocalScale.x
