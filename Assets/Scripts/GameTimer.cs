@@ -11,7 +11,7 @@ public class GameTimer : MonoBehaviour
     private bool canStartBoss;
     void Start()
     {
-        Timer.text = "Time : " + (int)timerFull;
+        Timer.text = "Time : " + Mathf.Abs((int)timerFull);
         canStartBoss = true;
     }
 
@@ -19,7 +19,7 @@ public class GameTimer : MonoBehaviour
     void Update()
     {
         timerFull -= Time.deltaTime;
-        Timer.text = "Time : " + (int)timerFull;
+        Timer.text = "Time : " + Mathf.Abs((int)timerFull);
 
 
         if (canStartBoss && timerFull < 0)
