@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Backgroundfix : MonoBehaviour
 {
-    public float resetX = 0f;         // X position to move back to
-    public float thresholdX = -340f;  // X position threshold
+    public float resetX = 0f;        
+    public float thresholdX = -340f;  
 
     void Update()
     {
