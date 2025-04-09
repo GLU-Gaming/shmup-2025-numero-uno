@@ -14,12 +14,11 @@ public class Lazer : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<EnemyGeneral>().Death();
-        } else if (other.gameObject.CompareTag("EnemyBoss"))
+        } 
+        
+        if (other.gameObject.CompareTag("EnemyBoss"))
         {
-            for (int i = 0; i < 16; i++)
-            {
-                other.gameObject.GetComponent<BossGeneral>().OnHit();
-            }
+            other.gameObject.GetComponent<BossGeneral>().OnHit();
         }
     }
 }
