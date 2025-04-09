@@ -179,8 +179,6 @@ public class PlayerManager : MonoBehaviour
                 }
                 else
                 {
-                    audioSource.clip = hitSFX;
-                    audioSource.Play();
                     playerHealth -= 1;
                     healthScript.healthtest();
                     PlayerHealthTXT.text = "HP:" + playerHealth;
@@ -209,6 +207,8 @@ public class PlayerManager : MonoBehaviour
                     playerHealth -= 1;
                     healthScript.healthtest();
                     PlayerHealthTXT.text = "HP:" + playerHealth;
+                    audioSource.clip = hitSFX;
+                    audioSource.Play();
                 }
 
                 transform.position = spawnPos;
