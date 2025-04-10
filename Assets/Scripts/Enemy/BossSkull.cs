@@ -71,6 +71,7 @@ public class BossSkull : MonoBehaviour
     [SerializeField] GameObject TEETH;
 
     [SerializeField] GameObject postProcessing;
+    [SerializeField] GameObject postProcessingLight;
 
     private void Start()
     {
@@ -120,6 +121,7 @@ public class BossSkull : MonoBehaviour
         }
 
         postProcessing.SetActive(!bossGeneral.invincible);
+        postProcessingLight.SetActive(!bossGeneral.invincible);
 
         if (bossGeneral.invincible)
         {
