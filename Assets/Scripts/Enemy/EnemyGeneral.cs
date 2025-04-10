@@ -9,6 +9,8 @@ public class EnemyGeneral : MonoBehaviour
 
     [SerializeField] private GameObject player;
 
+    [SerializeField] private bool tilts;
+
     void FixedUpdate()
     {
         if (transform.position.x > 20 || transform.position.x < -20 || transform.position.y > 20 || transform.position.y < -20)
@@ -16,7 +18,10 @@ public class EnemyGeneral : MonoBehaviour
             GetComponent<BatchChild>().Deactivate();
         }
 
-        transform.rotation = Quaternion.Euler(0, 0, -enemyBehaviour.rb.linearVelocity.x);
+        if (tilts)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, -enemyBehaviour.rb.linearVelocity.x);
+        }
     }
 
     private void OnEnable()
