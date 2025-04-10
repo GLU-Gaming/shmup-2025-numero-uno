@@ -67,6 +67,7 @@ MonoBehaviour:
   maxHealth: 4
   enemyBehaviour: {fileID: 7896305617044034027}
   player: {fileID: 0}
+  tilts: 1
 --- !u!114 &7896305617044034027
 MonoBehaviour:
   m_ObjectHideFlags: 0

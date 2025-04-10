@@ -9190,6 +9190,7 @@ MonoBehaviour:
   mouthMovement: 1
   MOUTH: {fileID: 270057499}
   TEETH: {fileID: 1209121118}
+  postProcessing: {fileID: 47068809}
   positionOffset: 0
 --- !u!114 &1361918166
 MonoBehaviour:

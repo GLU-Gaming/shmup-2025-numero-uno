@@ -70,6 +70,8 @@ public class BossSkull : MonoBehaviour
     [SerializeField] GameObject MOUTH;
     [SerializeField] GameObject TEETH;
 
+    [SerializeField] GameObject postProcessing;
+
     private void Start()
     {
         lazerManager = lazerManagerHolder.GetComponent<BatchManager>();
@@ -116,6 +118,8 @@ public class BossSkull : MonoBehaviour
         {
             ChangePhase();
         }
+
+        postProcessing.SetActive(!bossGeneral.invincible);
 
         if (bossGeneral.invincible)
         {
