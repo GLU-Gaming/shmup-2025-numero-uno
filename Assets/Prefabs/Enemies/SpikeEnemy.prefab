@@ -64,9 +64,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf3b4b605974714d9752dee143226ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 2
   enemyBehaviour: {fileID: 2492200071300365204}
   player: {fileID: 0}
+  tilts: 0
 --- !u!54 &2041890478803714377
 Rigidbody:
   m_ObjectHideFlags: 0
